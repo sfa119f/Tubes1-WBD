@@ -1,0 +1,83 @@
+.form {
+    position: absolute;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.5rem;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.banner {
+    flex-basis: 20%;
+    background: black;
+    color: white;
+    padding: 0.5rem;
+}
+.banner h1 {
+    font-size: 1.5rem;
+}
+.field {
+    margin: 2rem 2rem 1rem;
+    justify-content: center;
+}
+.field h4 {
+    color: grey;
+    font-weight: medium;
+}
+.field h4 a {
+    text-decoration: none;
+    font-weight: bold;
+    color: grey;
+}
+.field h4 a:hover {
+    color: black;
+    text-decoration: underline;
+    transition: 0.25s;
+}
+i .fa-eye {
+    display: hidden;
+}
+i {
+    font-size: 1rem;
+    position: relative;
+    top: -1.5rem;
+    color: grey;
+    transition: 0.5s;
+}
+input {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid grey;
+    font-size: 1.15rem;
+}
+input[type="submit"] {
+    height: 2.5rem;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+input[type="submit"]:hover {
+    background: grey;
+}
+input:focus~label, input:valid~label {
+    top: -3rem;
+    left: 0rem;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+}
+label {
+    position: relative;
+    top: -1.5rem;
+    left: 0rem; 
+    color: grey;
+    transition: 0.5s;
+    pointer-events: none;
+}
