@@ -1,16 +1,33 @@
-const password = document.getElementById('password');
-const show = document.getElementById('show');
-const hide = document.getElementById('hide');
+const password = document.getElementById("password");
+const show = document.getElementById("show");
+const hide = document.getElementById("hide");
+const cPassword = document.getElementById("confirmPassword");
+const cShow = document.getElementById("showCPass");
+const cHide = document.getElementById("hideCPass");
 
 function showPass(){
-    password.type = 'text';
-    show.style.display = 'block';
-    show.style.color = '#293241';
-    hide.style.display = 'none';
+    if(password.type === "password"){
+        password.type = "text";
+        show.style.display = "";
+        show.style.color = "black";
+        hide.style.display = "none";
+    }
+    else{
+        password.type = "password";
+        hide.style.display = "";
+        show.style.display = "none";
+    }
 }
-
-function hidePass(){
-    password.type = 'password';
-    hide.style.display = 'block';
-    show.style.display = 'none';
+function showCPass(){
+    if(cPassword.type === "password"){
+        cPassword.type = "text";
+        cShow.style.display = "";
+        cShow.style.color = "black";
+        cHide.style.display = "none";
+    }
+    else{
+        cPassword.type = "password";
+        cHide.style.display = "";
+        cShow.style.display = "none";
+    }
 }

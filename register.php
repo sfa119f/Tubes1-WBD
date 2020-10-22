@@ -29,14 +29,18 @@
                 <div>
                     <input type="password" id="password" name="password" required>
                     <label for="password">Password</label>
-                    <i class="fa fa-eye" id="eye1" aria-hidden="true" onclick="hidePass()"></i>
-                    <i class="fa fa-eye-slash" id="eye2" aria-hidden="true" onclick="showPass()"></i>
+                    <a onclick="showPass()">
+                        <i class="fa fa-eye right" id="show" style="display: none;"></i>
+                        <i class="fa fa-eye-slash right" id="hide"></i>
+                    </a>
                 </div>
                 <div>
                     <input type="password" id="confirmPassword" name="confirmPassword" required>
                     <label for="password">Password</label>
-                    <i class="fa fa-eye" id="eye1" aria-hidden="true" onclick="hidePass()"></i>
-                    <i class="fa fa-eye-slash" id="eye2" aria-hidden="true" onclick="showPass()"></i>
+                    <a onclick="showCPass()">
+                        <i class="fa fa-eye right" id="showCPass" style="display: none;"></i>
+                        <i class="fa fa-eye-slash right" id="hideCPass"></i>
+                    </a>
                 </div>
                 <input type="submit" name="register" value="Register">
                 <h4 class="center">Already have an account? <a href="login.php">Log In</a></h4>
@@ -44,3 +48,7 @@
         </div>
     </div>
 </body>
+
+<script src="/assets/scripts/showPass.js"></script>
+
+</html>

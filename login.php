@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="/assets/css/form.css">
     <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="/assets/css/solid.min.css">
-    <script src="/assets/scripts/showPass.js"></script>
 </head>
 <body>
     <div class="form">
@@ -24,10 +23,12 @@
                     <label for="password">Username</label>
                 </div>
                 <div>
-                    <input type="password" id="password" name="password" required>
+                    <input type="password" id="password" name="pass" required>
                     <label for="password">Password</label>
-                    <i class="fa fa-eye right" id="show" aria-hidden="true" onclick="hidePass()"></i>
-                    <i class="fa fa-eye-slash right" id="hide" aria-hidden="true" onclick="showPass()"></i>
+                    <a onclick="showPass()">
+                        <i class="fa fa-eye right" id="show" style="display: none;"></i>
+                        <i class="fa fa-eye-slash right" id="hide"></i>
+                    </a>
                 </div>
                 <input type="submit" name="login" value="Log In">
                 <h4 class="center">Don't have an account? <a href="register.php">Register</a></h4>
@@ -35,3 +36,7 @@
         </div>
     </div>
 </body>
+
+<script src="/assets/scripts/showPass.js"></script>
+
+</html>

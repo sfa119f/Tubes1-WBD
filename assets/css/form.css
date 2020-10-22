@@ -37,13 +37,11 @@
     text-decoration: underline;
     transition: 0.25s;
 }
-i .fa-eye {
-    display: hidden;
-}
 i {
-    font-size: 1rem;
+    font-size: 1.15rem;
     position: relative;
     top: -1.5rem;
+    right: calc(6.5rem - 100%);
     color: grey;
     transition: 0.5s;
 }
