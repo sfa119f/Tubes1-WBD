@@ -21,16 +21,22 @@ body {
 .right {
 	text-align: right;
 }
+.mid {
+	align-self: center;
+}
 
 /*flex*/
 .flex {
 	display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
 }
 .flex-1 {
-    flex : 2;
+    flex : 1;
     min-width: 100px;
+    max-width: 100% !important;
+}
+.flex-2 {
+    flex : 2;
+    min-width: 200px;
     max-width: 100% !important;
 }

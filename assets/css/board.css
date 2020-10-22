@@ -1,7 +1,7 @@
 .navbar {
     list-style-type: none;
     margin: 0;
-    padding: 0 10%;
+    padding: 0 5%;
     overflow: hidden;
     background: rgb(100, 50, 10);
     font-size: 1.2rem;
@@ -26,19 +26,31 @@
     color: black;
 }
 .navbar .search {
-    width: 300px;
-    padding: 0.2rem;
-    margin: 0.6rem 0;
-    font-size: 1.2rem;
+    width: 200px;
 }
-.search .input[type=text] {
-    width: 100%;
+.navbar input[type=text] {
+    width: 170px;
+    padding: 0.2rem;
+    margin: 1rem 0;
+    font-size: 1.2rem;
     border: none;
 }
+.navbar button {
+    width: 30px;
+    padding: 0.2rem;
+    margin: 1rem -0.5rem;
+    background: lightgrey;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+}
+.navbar button:hover {
+    background: lightslategrey;
+}
 .content {
-    padding: 0 10%;
+    padding: 0 5%;
 }
 .content a {
     text-decoration: none;
-    color: black;
+    color: black;   
 }
