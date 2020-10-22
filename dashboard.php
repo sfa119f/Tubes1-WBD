@@ -14,15 +14,15 @@
 </head>
 <body>
     <ul class="navbar">
-        <li><a href="" class="active">Home</a></li>
-        <li><a href="#History">History</a></li>
+        <li><a href="" class="active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#History"><i class="fas fa-history"></i> History</a></li>
         <li class="search">
             <form action="">
                 <input type="text" placeholder="Search" name="search">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
         </li>
-        <li style="float:right; width:100px;"><a href="#Logout" style="text-align: right;">Logout</a></li>
+        <li style="float:right; width:110px;"><a href="#Logout" style="text-align: right;"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
     </ul>
     <div class="content">
         <div class="flex">
