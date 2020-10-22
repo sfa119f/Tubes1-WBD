@@ -22,7 +22,7 @@
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
         </li>
-        <li style="float:right"><a href="#Logout" style="text-align: right;">Logout</a></li>
+        <li style="float:right; width:100px;"><a href="#Logout" style="text-align: right;">Logout</a></li>
     </ul>
     <div class="content">
         <div class="flex">

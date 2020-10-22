@@ -21,12 +21,12 @@
             <form action="" method="">
                 <div>
                     <input type="text" id="username" name="username" onkeyup="usernameCheck(this.value)" required>
-                    <label for="password">Username</label>
+                    <label for="username">Username</label>
                 </div>
                 <label for="" id="usernameWarn"></label>
                 <div>
                     <input type="text" id="email" name="email" onkeyup="emailCheck(this.value)" required>
-                    <label for="password">Email</label>
+                    <label for="email">Email</label>
                 </div>
                 <label for="" id="emailWarn"></label>
                 <div>
@@ -40,7 +40,7 @@
                 <label for="" id="passWarn"></label>
                 <div>
                     <input type="password" id="confirmPassword" name="confirmPassword" onkeyup="cPassCheck(this.value)" required>
-                    <label for="password">Confirm Password</label>
+                    <label for="confirmPassword">Confirm Password</label>
                     <a onclick="showCPass()">
                         <i class="fa fa-eye right" id="showCPass" style="display: none;"></i>
                         <i class="fa fa-eye-slash right" id="hideCPass"></i>

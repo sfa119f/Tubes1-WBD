@@ -1,0 +1,65 @@
+.addChoco div{
+    margin: 15px 0;
+}
+.addChoco input {
+    position: absolute;
+    left: 200px;
+    box-sizing: border-box;
+    font-size: 1.25rem;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+}
+.addChoco input[type=text], .addChoco input[type=number] {
+    border: 1px solid rgb(100, 50, 10);
+}
+.addChoco input[type=number], .addChoco input[type=file] {
+    width: 300px;
+}
+.addChoco input[type=text] {
+    width: calc(95% - 200px);
+}
+.addChoco input[type=submit] {
+    width: 160px;
+    padding: 0.5rem;
+    position: absolute;
+    left: calc(95% - 160px);
+    top: calc(100vh - 5rem);
+    background: rgb(100, 50, 10);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+.addChoco input[type=submit]:hover {
+    background: rgb(120, 70, 30);
+}
+.addChoco label {
+    width: 200px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.addChoco i {
+    font-size: 1.25rem;
+}
+.addChoco .fa-minus-circle {
+    box-sizing: border-box;
+    position: absolute;
+    left: 200px;
+    padding: 0.45rem 0.4rem;
+}
+.addChoco .fa-plus-circle {
+    box-sizing: border-box;
+    position: absolute;
+    left: calc(500px - 2rem);
+    padding: 0.45rem 0.4rem;
+}
+
+/* Hide input number arrow */
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}

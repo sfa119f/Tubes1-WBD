@@ -20,7 +20,7 @@
             <form action="" method="">
                 <div>
                     <input type="text" id="username" name="username" required>
-                    <label for="password">Username</label>
+                    <label for="username">Username</label>
                 </div>
                 <div>
                     <input type="password" id="password" name="pass" required>

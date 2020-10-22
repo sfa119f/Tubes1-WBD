@@ -6,7 +6,7 @@
     width: 200px;
     height: 300px;
     margin: 20px;
-    background:  rgb(255, 215, 142);
+    background:  rgb(255, 215, 140);
     display: flex;
     flex-direction: column;
     cursor: pointer;
