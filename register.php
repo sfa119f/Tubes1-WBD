@@ -6,6 +6,7 @@
 <html lang='en'>
 <head>
     <title>Login</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/form.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
@@ -30,18 +31,18 @@
                 </div>
                 <label for="" id="emailWarn"></label>
                 <div>
-                    <input type="password" id="password" name="password" onkeyup="passCheck(this.value)" required>
-                    <label for="password">Password</label>
-                    <a onclick="showPass()">
-                        <i class="fa fa-eye right" id="show" style="display: none;"></i>
-                        <i class="fa fa-eye-slash right" id="hide"></i>
+                    <input type="password" id="passw" name="password" onkeyup="passCheck(this.value)" required>
+                    <label for="passw">Password</label>
+                    <a onclick="showPass(2)">
+                        <i class="fa fa-eye right" id="showPassw" style="display: none;"></i>
+                        <i class="fa fa-eye-slash right" id="hidePassw"></i>
                     </a>
                 </div>
                 <label for="" id="passWarn"></label>
                 <div>
                     <input type="password" id="confirmPassword" name="confirmPassword" onkeyup="cPassCheck(this.value)" required>
                     <label for="confirmPassword">Confirm Password</label>
-                    <a onclick="showCPass()">
+                    <a onclick="showPass(3)">
                         <i class="fa fa-eye right" id="showCPass" style="display: none;"></i>
                         <i class="fa fa-eye-slash right" id="hideCPass"></i>
                     </a>

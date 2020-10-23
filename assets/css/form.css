@@ -46,11 +46,19 @@ body {
 }
 i {
     font-size: 1.15rem;
-    position: relative;
-    top: -1.5rem;
-    right: calc(6.5rem - 100%);
+    position: absolute;
+    right: 2rem;
     color: grey;
     transition: 0.5s;
+}
+#show, #hide {
+    top: 10.5rem;
+}
+#showPassw, #hidePassw {
+    top: 13.75rem;
+}
+#showCPass, #hideCPass {
+    top: 17rem;
 }
 input {
     width: 100%;
@@ -86,4 +94,22 @@ label {
     color: grey;
     transition: 0.5s;
     pointer-events: none;
+}
+
+@media (max-width: 800px) {
+    .form {
+        width: 250px;
+    }
+}
+
+@media (max-width: 1236px) {
+    #show, #hide {
+        top: 12.75rem;
+    }
+    #showPassw, #hidePassw {
+        top: 16rem;
+    }
+    #showCPass, #hideCPass {
+        top: 19.25rem;
+    }
 }

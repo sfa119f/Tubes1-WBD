@@ -14,7 +14,7 @@
 .navbar li a {
     display: block;
     color: white;
-    text-align: center;
+    text-align: left;
     padding: 1rem 0.5rem;
     text-decoration: none;
 }
@@ -55,4 +55,10 @@
 .content a {
     text-decoration: none;
     color: black;   
+}
+
+@media (max-width: 850px) {
+    .navbar, .content {
+        padding: 0 20px;
+    }
 }

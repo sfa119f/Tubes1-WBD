@@ -6,6 +6,7 @@
 <html lang='en'>
 <head>
     <title>History</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/board.css">
     <link rel="stylesheet" href="assets/css/history.css">

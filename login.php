@@ -6,6 +6,7 @@
 <html lang='en'>
 <head>
     <title>Login</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/form.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
@@ -25,7 +26,7 @@
                 <div>
                     <input type="password" id="password" name="pass" required>
                     <label for="password">Password</label>
-                    <a onclick="showPass()">
+                    <a onclick="showPass(1)">
                         <i class="fa fa-eye right" id="show" style="display: none;"></i>
                         <i class="fa fa-eye-slash right" id="hide"></i>
                     </a>

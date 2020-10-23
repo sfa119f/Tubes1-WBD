@@ -29,7 +29,7 @@
     margin: 0 0 0.5rem;
     line-height: 1rem;
 }
-button {
+.content button {
     position: relative;
     top: 75px;
     margin: 0.5rem;
@@ -86,11 +86,56 @@ input[type=number] {
     left: 300px;
     bottom: -3rem;
 }
+#addressLabel {
+    position: relative;
+    top: 1.5rem;
+}
 textarea {
     position: relative;
+    top: 1.5rem;
     width: 100%;
+    padding: 0.25rem;
     font-size: 0.9rem;
     font-family: inherit;
     border: 1px solid rgb(100, 50, 10);
     border-radius: 0.25rem;
+}
+
+@media (max-width: 800px) {
+    .detail {
+        flex-direction: column;
+    }
+    .info {
+        position: relative;
+        left: 0;
+        width: 100%;
+        padding: 0;
+    }
+    .image img {
+        width: 150px;
+        height: 150px;
+    }
+    .content button {
+        top: 0;
+    }
+    #amountLabel, input[type=number], #priceLabel, #price, .fa-minus-circle, .fa-plus-circle {
+        position: relative;
+        top: 1rem;
+    }
+    #amountLabel, input[type=number], #priceLabel, #price {
+        left: 0;
+    }
+    .fa-minus-circle {
+        left: calc(-250px - 1.25rem);
+    }
+    .fa-plus-circle {
+        left: -2.15rem;
+    }
+    #addressLabel, textarea {
+        top: 0;
+        margin-top: 12px;
+    }
+    .address {
+        margin-top: 20px;
+    }
 }

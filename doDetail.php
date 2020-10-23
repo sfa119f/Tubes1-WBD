@@ -5,7 +5,8 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-    <title>Detail</title>
+    <title>Do Detail</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/board.css">
     <link rel="stylesheet" href="assets/css/detail.css">
@@ -64,9 +65,9 @@
                 <label id="price">Rp 20000</label>
             </div>
         </div>
-        <div>
+        <div class="address">
             <label for="address" id="addressLabel">Address:</label>
-            <textarea name="desc" id="desc" rows="3" placeholder="Insert your address"></textarea>
+            <textarea name="desc" id="address" rows="3" placeholder="Insert your address"></textarea>
         </div>
         <div>
             <button class="cancel"><i class="fas fa-ban"></i> Cancel</button>
