@@ -17,7 +17,7 @@
             <h1>Willy Wangky Choco Factory</h1>
         </div>
         <div class="field">
-            <form action="" method="">
+            <form action="#" method="POST">
                 <div>
                     <input type="text" id="username" name="username" required>
                     <label for="username">Username</label>
@@ -37,6 +37,7 @@
     </div>
 </body>
 
+<?php include "assets/php/loginprocess.php"?>
 <script src="assets/scripts/showPass.js"></script>
 
 </html>

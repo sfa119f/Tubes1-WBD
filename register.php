@@ -18,7 +18,7 @@
             <h1>Willy Wangky Choco Factory</h1>
         </div>
         <div class="field">
-            <form action="" method="">
+            <form action="#" method="POST">
                 <div>
                     <input type="text" id="username" name="username" onkeyup="usernameCheck(this.value)" required>
                     <label for="username">Username</label>
@@ -47,14 +47,15 @@
                     </a>
                 </div>
                 <label for="" id="cPassWarn"></label>
-                <input type="submit" name="register" value="Register">
+                <input type="submit" id="registerbtn" name="register" value="Register">
                 <h4 class="center">Already have an account? <a href="login.php">Log In</a></h4>
             </form>
         </div>
     </div>
 </body>
 
+<?php include "assets/php/registerprocess.php"?>
 <script src="assets/scripts/showPass.js"></script>
-<script src="assets/scripts/userpasscheck.js"></script>
+<script src="assets/scripts/register.js"></script>
 
 </html>

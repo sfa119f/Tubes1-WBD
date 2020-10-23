@@ -1,12 +1,11 @@
 <?php
-    //include "../../db/dbconfig.php";
+    include "../php/dbconfig.php";
     $q = $_GET["q"];
     $str = "";
-    /* $selectdata = "SELECT * FROM user WHERE username='$q' ";
+    $selectdata = "SELECT * FROM users WHERE username='$q' ";
     $query = mysqli_query($con,$selectdata) or die (mysqli_error($con));
     $countuser = mysqli_num_rows($query); 
-    if($countuser == 1){*/
-    if($q == "test"){
+    if($countuser == 1){
         $str = "Username Already Taken";?>
         <style type="text/css">
             #username {
@@ -24,7 +23,7 @@
         </style>
         <?php
     }
-    else{
+    else if ($countuser != 1){
         $str = "Username Avaiable";?>
         <style type="text/css">
             #username {
@@ -32,6 +31,9 @@
             }
         </style>
         <?php
+    }
+    else{
+        $str = "ERROR";
     }
 
     echo $str

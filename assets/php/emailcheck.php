@@ -1,12 +1,11 @@
 <?php
-    //include "../../db/dbconfig.php";
+    include "../php/dbconfig.php";
     $q = $_GET["q"];
     $str = "";
-    /* $selectdata = "SELECT * FROM user WHERE username='$q' ";
+    $selectdata = "SELECT * FROM users WHERE email='$q' ";
     $query = mysqli_query($con,$selectdata) or die (mysqli_error($con));
-    $countuser = mysqli_num_rows($query);
-    if($countuser == 1){*/
-    if($q == "example@example"){
+    $countuser = mysqli_num_rows($query); 
+    if($countuser == 1){
         $str = "Email Already Taken";?>
         <style type="text/css">
             #email {
@@ -24,7 +23,7 @@
         </style>
         <?php
     }
-    else{
+    else if ($countuser != 1){
         $str = "Email Avaiable";?>
         <style type="text/css">
             #email {
@@ -32,6 +31,9 @@
             }
         </style>
         <?php
+    }
+    else{
+        $str = "ERROR";
     }
 
     echo $str
