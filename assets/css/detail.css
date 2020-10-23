@@ -1,0 +1,50 @@
+.image {
+    width: 220px;
+    padding: 0.5rem;
+}
+.image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.info {
+    position: absolute;
+    width: calc(90% - 220px);
+    left: calc(5% + 220px);
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+.info table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.info td, .info th {
+    vertical-align: top;
+}
+.info th {
+    width: 135px;
+}
+.info h3 {
+    padding: 0;
+    margin: 0 0 0.5rem;
+    line-height: 1rem;
+}
+button {
+    position: relative;
+    top: 150px;
+    margin: 0.5rem;
+}
+.buy {
+    position: relative;
+    left: calc(95% - 300px);
+}
+.cancel {
+    position: relative;
+    left: calc(95% - 300px);
+}
+label {
+    font-size: 0.9rem;
+}
+i:hover {
+    cursor: pointer;
+}

@@ -46,7 +46,7 @@
                     <label for="amount">Amount</label>
                     <input class="center" type="number" id="amount" name="amount" value="0">
                     <i class="fas fa-plus-circle" onclick="inAmount()"></i>
-                    <i class="fas fa-minus-circle" onclick="decAmount()"></i>
+                    <i class="fas fa-minus-circle" onclick="decAmount(0)"></i>
                 </div>
                 <div>
                     <label for="image">Image</label>

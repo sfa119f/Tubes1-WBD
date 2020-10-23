@@ -15,9 +15,9 @@ function inAmount(){
     var x = parseInt(amount.value);
     amount.value = x + 1;
 }
-function decAmount(){
+function decAmount(start){
     var x = parseInt(amount.value);
-    if(x-1 >= 0){
+    if(x-1 >= start){
     amount.value = x - 1;
     }
 }

@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/board.css">
     <link rel="stylesheet" href="/assets/css/history.css">
-    <link rel="stylesheet" href="/assets/css/addChoco.css">
     <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="/assets/css/solid.min.css">
 </head>
@@ -31,27 +30,22 @@
                 <h2>Transaction History</h2>
             </div>
         </div>
-        <div class="addChoco">
-            <table class="left">
-                <tr>
-                    <th>Chocolate Name</th>
-                    <th>Amount</th>
-                    <th>Total Price</th>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Address</th>
-                </tr>
-                    <td>Milk Choco</td>
-                    <td>7</td>
-                    <td>Rp21.000,00</td>
-                    <td>23 Oktober 2020</td>
-                    <td>11.22.33</td>
-                    <td>Indonesia</td>
-            </table>
-        </div>
+        <table class="left">
+            <tr>
+                <th>Chocolate Name</th>
+                <th>Amount</th>
+                <th>Total Price</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Address</th>
+            </tr>
+                <td>Milk Choco</td>
+                <td>7</td>
+                <td>Rp21.000,00</td>
+                <td>23 Oktober 2020</td>
+                <td>11.22.33</td>
+                <td>Indonesia</td>
+        </table>
     </div>
 </body>
-
-<script src="assets/scripts/numArrow.js"></script>
-
 </html>

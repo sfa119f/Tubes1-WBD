@@ -11,6 +11,11 @@ body {
 	background: whitesmoke;
 }
 
+/*object position*/
+.mid {
+	align-self: center;
+}
+
 /*Text align*/
 .left {
 	text-align: left;
@@ -20,9 +25,6 @@ body {
 }
 .right {
 	text-align: right;
-}
-.mid {
-	align-self: center;
 }
 
 /*flex*/
@@ -35,8 +37,33 @@ body {
     min-width: 100px;
     max-width: 100% !important;
 }
-.flex-2 {
-    flex : 2;
-    min-width: 200px;
+.flex-3 {
+    flex : 3;
+    min-width: 300px;
     max-width: 100% !important;
 }
+
+/*button*/
+button {
+	width: 150px;
+	padding: 0.5rem;
+	background:  rgb(100, 50, 10);
+	color: white;
+	font-size: 1.25rem;
+	font-weight: bold;
+	border: none;
+	border-radius: 0.25rem;
+}
+button:hover {
+	background:  rgb(120, 70, 30);
+	cursor: pointer;
+}
+
+/* Hide input number arrow */
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+  }
+  input[type=number] {
+	-moz-appearance: textfield;
+  }

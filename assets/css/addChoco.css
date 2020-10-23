@@ -42,6 +42,9 @@
 .addChoco i {
     font-size: 1.25rem;
 }
+.addChoco i:hover {
+    cursor: pointer;
+}
 .addChoco .fa-minus-circle {
     box-sizing: border-box;
     position: absolute;
@@ -53,13 +56,4 @@
     position: absolute;
     left: calc(500px - 2rem);
     padding: 0.45rem 0.4rem;
-}
-
-/* Hide input number arrow */
-input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-input[type=number] {
-  -moz-appearance: textfield;
 }
