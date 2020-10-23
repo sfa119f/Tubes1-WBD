@@ -35,7 +35,7 @@
                 <img src="/assets/img/choco_milk.jpg" alt="Milk Choco">
             </div>
             <div class="info left">
-                <h3>Milk Choco</h3>
+                <h3>Milk Choco1</h3>
                 <table style="font-size:0.9rem">
                     <tr>
                         <th>Amount sold</th>
@@ -60,13 +60,13 @@
                     <i class="fas fa-plus-circle" onclick="inAmount()"></i>
                     <i class="fas fa-minus-circle" onclick="decAmount(1)"></i>
                 </div>
-                    <label id="priceLabel">Price: </label>
-                    <label id="price">Rp 20000</label>
+                <label id="priceLabel">Price: </label>
+                <label id="price">Rp 20000</label>
             </div>
         </div>
         <div>
-            <label for="address" id="addressLabel">Address</label>
-            <input type="text" id="address" name="address" placeholder="Insert your address">
+            <label for="address" id="addressLabel">Address:</label>
+            <textarea name="desc" id="desc" rows="3" placeholder="Insert your address"></textarea>
         </div>
         <div>
             <button class="cancel"><i class="fas fa-ban"></i> Cancel</button>

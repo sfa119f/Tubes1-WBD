@@ -1,29 +1,30 @@
 .addChoco div{
     margin: 15px 0;
 }
-.addChoco input {
+.addChoco input, .addChoco textarea {
     position: absolute;
     left: 200px;
     box-sizing: border-box;
+    font-family: inherit;
     font-size: 1.25rem;
     border-radius: 0.25rem;
     padding: 0.25rem;
 }
-.addChoco input[type=text], .addChoco input[type=number] {
+.addChoco input[type=text], .addChoco input[type=number], .addChoco textarea {
     border: 1px solid rgb(100, 50, 10);
 }
 .addChoco input[type=number], .addChoco input[type=file] {
     width: 300px;
 }
-.addChoco input[type=text] {
+.addChoco input[type=text], .addChoco textarea {
     width: calc(95% - 200px);
 }
 .addChoco input[type=submit] {
-    width: 160px;
+    width: 170px;
     padding: 0.5rem;
-    position: absolute;
-    left: calc(95% - 160px);
-    top: calc(100vh - 5rem);
+    position: relative;
+    left: calc(100% - 170px);
+    top: 150px;
     background: rgb(100, 50, 10);
     color: white;
     border: none;
