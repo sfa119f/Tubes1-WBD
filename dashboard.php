@@ -6,11 +6,11 @@
 <html lang='en'>
 <head>
     <title>Dashboard</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/board.css">
-    <link rel="stylesheet" href="/assets/css/dashboard.css">
-    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
-    <link rel="stylesheet" href="/assets/css/solid.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/board.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/solid.min.css">
 </head>
 <body>
     <ul class="navbar">
@@ -37,7 +37,7 @@
             <div class="card">
                 <span class="tooltip center">Details</span>
                 <div class="image center mid">
-                    <img src="/assets/img/choco_milk.jpg" alt="Milk Choco">
+                    <img src="assets/img/choco_milk.jpg" alt="Milk Choco">
                 </div>
                 <div class="info left">
                     <h4>Choco milk</h4>
@@ -49,6 +49,6 @@
     </div>
 </body>
 
-<script src="/assets/scripts/tooltip.js"></script>
+<script src="assets/scripts/tooltip.js"></script>
 
 </html>

@@ -6,11 +6,11 @@
 <html lang='en'>
 <head>
     <title>Detail</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/board.css">
-    <link rel="stylesheet" href="/assets/css/detail.css">
-    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
-    <link rel="stylesheet" href="/assets/css/solid.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/board.css">
+    <link rel="stylesheet" href="assets/css/detail.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/solid.min.css">
 </head>
 <body>
     <ul class="navbar">
@@ -32,7 +32,7 @@
         </div>
         <div class="flex detail">
             <div class="image mid">
-                <img src="/assets/img/choco_milk.jpg" alt="Milk Choco">
+                <img src="assets/img/choco_milk.jpg" alt="Milk Choco">
             </div>
             <div class="info left">
                 <h3>Milk Choco1</h3>
