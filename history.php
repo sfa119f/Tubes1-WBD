@@ -6,11 +6,11 @@
 <html lang='en'>
 <head>
     <title>History</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/board.css">
-    <link rel="stylesheet" href="/assets/css/history.css">
-    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
-    <link rel="stylesheet" href="/assets/css/solid.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/board.css">
+    <link rel="stylesheet" href="assets/css/history.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/solid.min.css">
 </head>
 <body>
     <ul class="navbar">

@@ -6,10 +6,10 @@
 <html lang='en'>
 <head>
     <title>Login</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/form.css">
-    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
-    <link rel="stylesheet" href="/assets/css/solid.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/form.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/solid.min.css">
 </head>
 <body>
     <div class="form">
@@ -37,6 +37,6 @@
     </div>
 </body>
 
-<script src="/assets/scripts/showPass.js"></script>
+<script src="assets/scripts/showPass.js"></script>
 
 </html>
