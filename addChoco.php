@@ -54,7 +54,7 @@
                 </div>
                 <div>
                     <label for="desc">Description</label>
-                    <input class="left" type="text" id="desc" name="desc" style="height:10rem">
+                    <textarea name="desc" id="desc" rows="5"></textarea>
                 </div>
                 <input type="submit" name="addChocolate" value="Add Chocolate">
             </form>
