@@ -18,7 +18,7 @@ if(isset($_POST['login'])){ #baca dari name
         setcookie('logged_type',$row["user_type"],time()+3600);
         echo'
         <script>
-            window.location.href="dashboard.php";
+            window.location.href="dashboard.php?show=def";
         </script>
         ';
         //echo'<meta http-equiv = "refresh" content = "1; url = data.php?action=view&id=0" />';
