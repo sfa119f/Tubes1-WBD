@@ -49,7 +49,7 @@
 					{
 			?>
             <div class="card">
-                <span class="tooltip center">Details</span>
+                <span class="tooltip center"><?php echo $row["choco_name"]; ?></span>
                 <div class="image center mid">
                     <img src="images/<?php echo $row["image"]; ?>" >
                 </div>
