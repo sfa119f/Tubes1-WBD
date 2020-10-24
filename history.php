@@ -5,7 +5,7 @@
     //Get transaction database
     $user_id = $_SESSION['user_id'];
     $query = "SELECT * FROM transaction WHERE user_id='".$user_id."' ORDER BY transaction_date ASC";
-    $result = mysqli_query($con, $query);
+    $result = mysqli_query($con, $query) or die (mysqli_error($con));
 ?>
 
 <!DOCTYPE html>
@@ -38,10 +38,33 @@
             </tr>
             <?php if(mysqli_num_rows($result) > 0) : ?>
 				<?php while($row = mysqli_fetch_array($result)) : ?>
-                    <tr>               
-                        <td><?php echo $row["choco_id"]; ?></td>
+                    <tr>
+                        <?php
+                            $temp = "SELECT choco_name FROM chocolate WHERE choco_id='".$row["choco_id"]."'";
+                            $res = mysqli_query($con, $temp) or die (mysqli_error($con));
+                            $choconame = mysqli_fetch_array($res)["choco_name"]
+                        ?>  
+                        <td><?php echo $choconame; ?></td>
                         <td><?php echo $row["transaction_amount"]; ?></td>
-                        <td><?php echo $row["transaction_total"]; ?></td>
+                        <?php
+                            $chocoprice = $row["transaction_total"];
+                            if(strlen($chocoprice) > 3){
+                                $length = strlen($chocoprice)%3;
+                                if($length == 0){$length = 3;}
+                                $tempprice = $chocoprice;
+                                $chocoprice1 = str_split($tempprice,$length)[0];
+                                $tempprice = substr($tempprice,$length);
+                                $tempprice = str_split($tempprice,3);
+                                $chocopricestr = $chocoprice1;
+                                for($i=0;$i < count($tempprice);$i++){
+                                    $chocopricestr = $chocopricestr.".".$tempprice[$i];
+                                }
+                            }
+                            else{
+                                $chocopricestr = $chocoprice;
+                            }
+                        ?>
+                        <td>Rp <?php echo $chocopricestr; ?>,00</td>
                         <td><?php echo $row["transaction_date"]; ?></td>
                         <td><?php echo gmdate("H:i:s", $row["transaction_time"]); ?></td>
                         <td><?php echo $row["transaction_address"]; ?></td>
@@ -49,13 +72,6 @@
                 <?php endwhile; ?>
             <?php endif; ?>    
         </table>
-        <?php
-        
-            // display the links to the pages
-            for ($page=1;$page<=$number_of_pages;$page++) {
-                echo '<a href="history.php?page=' . $page . '">' . $page . '</a> ';
-            }
-        ?>
     </div>
 </body>
 </html>
