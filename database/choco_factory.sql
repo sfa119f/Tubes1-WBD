@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 24, 2020 at 11:23 AM
+-- Generation Time: Oct 24, 2020 at 11:43 AM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.6
 
@@ -43,11 +43,11 @@ CREATE TABLE `chocolate` (
 --
 
 INSERT INTO `chocolate` (`choco_id`, `choco_name`, `image`, `price`, `description`, `amount`, `amount_sold`) VALUES
-(1, 'silverqueen', NULL, 15000, 'Coklat Silverqueen', 100, 20),
-(5, 'cadbury', NULL, 20000, 'Coklat batang Cadbury', 100, 20),
-(6, 'Toblerone', NULL, 17500, 'Coklat Toblerone Large', 75, 0),
-(7, 'Kitkat', NULL, 10000, 'Coklat Kitkat Small', 150, 0),
-(8, 'BengBeng', NULL, 3000, 'Masa gatau bengbeng', 200, 3);
+(1, 'silverqueen', '../assets/img/silverqueen.png', 15000, 'Coklat Silverqueen', 100, 20),
+(5, 'cadbury', '../assets/img/cadbury.png\r\n', 20000, 'Coklat batang Cadbury', 100, 20),
+(6, 'Toblerone', '../assets/img/toblerone.jpg\r\n', 17500, 'Coklat Toblerone Large', 75, 0),
+(7, 'Kitkat', '../assets/img/kitkat.jpg\r\n', 10000, 'Coklat Kitkat Small', 150, 0),
+(8, 'BengBeng', '../assets/img/bengbeng.png\r\n', 3000, 'Masa gatau bengbeng', 200, 3);
 
 -- --------------------------------------------------------
 
