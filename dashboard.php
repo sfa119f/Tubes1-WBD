@@ -1,4 +1,5 @@
 <?php
+    $connect = mysqli_connect("localhost", "root", "", "choco_factory");
     include "assets/php/checklogin.php"
 ?>
 
@@ -39,17 +40,29 @@
             </div>
         </div>
         <div class="flex listChoco">
+            <?php
+				$query = "SELECT * FROM chocolate ORDER BY choco_id ASC";
+				$result = mysqli_query($connect, $query);
+				if(mysqli_num_rows($result) > 0)
+				{
+					while($row = mysqli_fetch_array($result))
+					{
+			?>
             <div class="card">
                 <span class="tooltip center">Details</span>
                 <div class="image center mid">
                     <img src="assets/img/choco_milk.jpg" alt="Milk Choco">
                 </div>
                 <div class="info left">
-                    <h4>Choco milk</h4>
-                    <h5>Amount sold</h5>
-                    <h5>Price</h5>
+                    <h4><?php echo $row["choco_name"]; ?></h4>
+                    <h5><?php echo $row["amount_sold"]; ?></h5>
+                    <h5><?php echo $row["price"]; ?></h5>
                 </div>
             </div>
+            <?php
+					}
+				}
+			?>
         </div>
     </div>
 </body>
