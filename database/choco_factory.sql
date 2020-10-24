@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 23, 2020 at 03:57 PM
+-- Generation Time: Oct 24, 2020 at 11:23 AM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.6
 
@@ -34,19 +34,20 @@ CREATE TABLE `chocolate` (
   `image` varchar(255) DEFAULT NULL,
   `price` int(11) DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL,
-  `amount` int(11) DEFAULT NULL
+  `amount` int(11) DEFAULT NULL,
+  `amount_sold` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `chocolate`
 --
 
-INSERT INTO `chocolate` (`choco_id`, `choco_name`, `image`, `price`, `description`, `amount`) VALUES
-(1, 'silverqueen', NULL, 15000, 'Coklat Silverqueen', 100),
-(5, 'cadbury', NULL, 20000, 'Coklat batang Cadbury', 100),
-(6, 'Toblerone', NULL, 17500, 'Coklat Toblerone Large', 75),
-(7, 'Kitkat', NULL, 10000, 'Coklat Kitkat Small', 150),
-(8, 'BengBeng', NULL, 3000, 'Masa gatau bengbeng', 200);
+INSERT INTO `chocolate` (`choco_id`, `choco_name`, `image`, `price`, `description`, `amount`, `amount_sold`) VALUES
+(1, 'silverqueen', NULL, 15000, 'Coklat Silverqueen', 100, 20),
+(5, 'cadbury', NULL, 20000, 'Coklat batang Cadbury', 100, 20),
+(6, 'Toblerone', NULL, 17500, 'Coklat Toblerone Large', 75, 0),
+(7, 'Kitkat', NULL, 10000, 'Coklat Kitkat Small', 150, 0),
+(8, 'BengBeng', NULL, 3000, 'Masa gatau bengbeng', 200, 3);
 
 -- --------------------------------------------------------
 
@@ -71,8 +72,8 @@ CREATE TABLE `transaction` (
 
 INSERT INTO `transaction` (`transaction_id`, `user_id`, `choco_id`, `transaction_date`, `transaction_time`, `transaction_address`, `transaction_total`, `transaction_amount`) VALUES
 (1, 1, 1, '2020-10-22', 216000, 'ITB, Bandung', 300000, 20),
-(2, 4, 5, '2020-10-22', 432000, 'Pondok Gede, Bekasi', 9000, 3),
-(3, 1, 2, '2020-10-22', 216000, 'ITB, Bandung', 400000, 20);
+(2, 4, 8, '2020-10-22', 432000, 'Pondok Gede, Bekasi', 9000, 3),
+(3, 1, 5, '2020-10-22', 216000, 'ITB, Bandung', 400000, 20);
 
 -- --------------------------------------------------------
 
