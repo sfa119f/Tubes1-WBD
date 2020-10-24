@@ -1,5 +1,5 @@
 <?php 
-    $connect = mysqli_connect("localhost", "root", "", "choco_factory");
+    $connect = mysqli_connect("localhost", "root", "", "choco_factory")  or die(mysqli_error()); ;
     include "assets/php/checklogin.php";
 ?>
 
@@ -35,7 +35,7 @@
         <table class="left">
             <?php
                 
-				$sql = "SELECT * FROM transaction ORDER BY transaction_date ASC";
+				$sql = "SELECT * FROM transaction";
                 $result = mysqli_query($connect, $sql);
                 
                 $result_per_page = 10;

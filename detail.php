@@ -1,9 +1,6 @@
 <?php
-    // session_start();
-    // $connect = mysqli_connect("localhost", "root", "", "choco_factory")
-    include "assets/php/checklogin.php"
-
-    
+    $connect = mysqli_connect("localhost", "root", "", "choco_factory");
+    include "assets/php/checklogin.php";    
 ?>
 
 <!DOCTYPE html>
