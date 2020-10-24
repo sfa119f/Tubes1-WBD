@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class="addChoco">
-            <form action="">
+            <form action="#" method="POST" enctype="multipart/form-data">
                 <div>
                     <label for="name">Name</label>
                     <input class="left" type="text" id="name" name="name">
@@ -63,6 +63,7 @@
     </div>
 </body>
 
+<?php include "assets/php/addChocoprocess.php"?>
 <script src="assets/scripts/numArrow.js"></script>
 
 </html>

@@ -33,6 +33,7 @@ if(isset($_POST['register'])){ #baca dari name
     }
     else{
         // ini sukses
+        //insertdata ="INSERT INTO <table> (field1,field2,...,fieldn) VALUES (val1,val2,...,valn)";
         $insertdata ="INSERT INTO users (username,email,password,user_type) VALUES('$username','$email','$password',2)";  
         /*  1 superuser
             2 user
@@ -52,17 +53,11 @@ if(isset($_POST['register'])){ #baca dari name
         else{
             echo'
             <script>
-                error on server side, no need to worry
+                alert("error on server side, no need to worry");
             </script>
-        ';
+            ';
         }
     }
-
-
-
-
-    //insertdata ="INSERT INTO <table> (field1,field2,...,fieldn) VALUES (val1,val2,...,valn)";
-    
 }
 else{
 }
