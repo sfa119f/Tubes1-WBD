@@ -1,6 +1,6 @@
 <?php
-    $connect = mysqli_connect("localhost", "root", "", "choco_factory");
-    include "assets/php/checklogin.php"
+    include_once "assets/php/checklogin.php";
+    include_once "assets/php/dashboardprocess.php";
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +23,7 @@
             <li><a href="#History"><i class="fas fa-history"></i> History</a></li>
         <?php endif; ?>
         <li class="search">
-            <form action="">
+            <form action="dashboard.php" method="GET">
                 <input type="text" placeholder="Search" name="search">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
@@ -36,33 +36,33 @@
                 <h3>Hello, <?php echo $_COOKIE['logged']?></h3>
             </div>
             <div class="flex-1 right mid">
-                <a href="">View all chocolates</a>
+                <?php if($allSearch) : ?>
+                    <a href="dashboard.php?show=<?php echo $search?>" id="viewDefChoco">View all result</a>
+                <?php elseif($allChoco) : ?>
+                    <a href="dashboard.php?show=def" id="viewDefChoco">View most sold</a>
+                <?php else : ?>
+                    <a href="dashboard.php?show=all" id="viewAllChoco">View all chocolates</a>
+                <?php endif; ?>
             </div>
         </div>
         <div class="flex listChoco">
-            <?php
-				$query = "SELECT * FROM chocolate ORDER BY choco_id ASC";
-				$result = mysqli_query($connect, $query);
-				if(mysqli_num_rows($result) > 0)
-				{
-					while($row = mysqli_fetch_array($result))
-					{
-			?>
-            <div class="card">
-                <span class="tooltip center"><?php echo $row["choco_name"]; ?></span>
-                <div class="image center mid">
-                    <img src="images/<?php echo $row["image"]; ?>" >
-                </div>
-                <div class="info left">
-                    <h4><?php echo $row["choco_name"]; ?></h4>
-                    <h5><?php echo $row["amount_sold"]; ?></h5>
-                    <h5><?php echo $row["price"]; ?></h5>
-                </div>
-            </div>
-            <?php
-					}
-				}
-			?>
+            <?php if(mysqli_num_rows($result)) :?>
+				<?php while($row = mysqli_fetch_array($result)) : ?>
+                    <div class="card">
+                        <span class="tooltip center">Details</span>
+                        <div class="image center mid">
+                            <img src="images/<?php echo $row["image"]; ?>" >
+                        </div>
+                        <div class="info left">
+                            <h4><?php echo $row["choco_name"]; ?></h4>
+                            <h5>Amount sold: <?php echo $row["amount_sold"]; ?></h5>
+                            <h5>Price: Rp <?php echo $row["price"]; ?>,00</h5>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            <?php else : ?>
+                <h1 class="flex-1 mid center" style="height:300px; padding:125px">No Result</h1>
+            <?php endif; ?>
         </div>
     </div>
 </body>
