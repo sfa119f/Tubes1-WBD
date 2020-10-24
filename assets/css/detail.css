@@ -6,6 +6,8 @@
     width: 200px;
     height: 200px;
     object-fit: cover;
+    background: rgb(255, 215, 140);
+    border: 2px solid rgb(100, 50, 10);
 }
 .info {
     position: absolute;

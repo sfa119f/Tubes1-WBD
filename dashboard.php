@@ -43,7 +43,25 @@
                         <div class="info left">
                             <h4><?php echo $row["choco_name"]; ?></h4>
                             <h5>Amount sold: <?php echo $row["amount_sold"]; ?></h5>
-                            <h5>Price: Rp <?php echo $row["price"]; ?>,00</h5>
+                            <?php
+                                $chocoprice = $row["price"];
+                                if(strlen($chocoprice) > 3){
+                                    $length = strlen($chocoprice)%3;
+                                    if($length == 0){$length = 3;}
+                                    $tempprice = $chocoprice;
+                                    $chocoprice1 = str_split($tempprice,$length)[0];
+                                    $tempprice = substr($tempprice,$length);
+                                    $tempprice = str_split($tempprice,3);
+                                    $chocopricestr = $chocoprice1;
+                                    for($i=0;$i < count($tempprice);$i++){
+                                        $chocopricestr = $chocopricestr.".".$tempprice[$i];
+                                    }
+                                }
+                                else{
+                                    $chocopricestr = $chocoprice;
+                                }
+                            ?>
+                            <h5>Price: Rp <?php echo $chocopricestr; ?>,00</h5>
                         </div>
                     </div></a>
                 <?php endwhile; ?>
