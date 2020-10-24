@@ -1,5 +1,6 @@
 <?php
-    session_start();
+    $connect = mysqli_connect("localhost", "root", "", "choco_factory");
+    include "assets/php/checklogin.php"
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +33,14 @@
             </div>
         </div>
         <table class="left">
+            <?php
+				$query = "SELECT * FROM transaction ORDER BY transaction_date ASC";
+				$result = mysqli_query($connect, $query);
+				if(mysqli_num_rows($result) > 0)
+				{
+					while($row = mysqli_fetch_array($result))
+					{
+            ?>                
             <tr>
                 <th>Chocolate Name</th>
                 <th>Amount</th>
@@ -40,12 +49,16 @@
                 <th>Time</th>
                 <th>Address</th>
             </tr>
-                <td>Milk Choco</td>
-                <td>7</td>
-                <td>Rp21.000,00</td>
-                <td>23 Oktober 2020</td>
-                <td>11.22.33</td>
-                <td>Indonesia</td>
+                <td><?php echo $row["choco_id"]; ?></td>
+                <td><?php echo $row["transaction_amount"]; ?></td>
+                <td><?php echo $row["transaction_total"]; ?></td>
+                <td><?php echo $row["transaction_date"]; ?></td>
+                <td><?php echo gmdate("H:i:s", $row["transaction_time"]); ?></td>
+                <td><?php echo $row["transaction_address"]; ?></td>
+            <?php
+					}
+				}
+			?>    
         </table>
     </div>
 </body>
