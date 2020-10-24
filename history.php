@@ -20,17 +20,7 @@
     <link rel="stylesheet" href="assets/css/solid.min.css">
 </head>
 <body>
-    <ul class="navbar">
-        <li><a href="dashboard.php?show=def"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="" class="active"><i class="fas fa-history"></i> History</a></li>
-        <li class="search">
-            <form action="dashboard.php" method="GET">
-                <input type="text" placeholder="Search" name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </li>
-        <li style="float:right; width:110px;"><a href="assets/php/logoutprocess.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
-    </ul>
+    <?php include "navbar.php"?>
     <div class="content">
         <div class="flex">
             <div class="flex-1 left">

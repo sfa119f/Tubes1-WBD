@@ -14,17 +14,7 @@
     <link rel="stylesheet" href="assets/css/solid.min.css">
 </head>
 <body>
-    <ul class="navbar">
-        <li><a href="#Home"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="" class="active"><i class="fas fa-plus"></i> Add Choco</a></li>
-        <li class="search">
-            <form action="">
-                <input type="text" placeholder="Search" name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </li>
-        <li style="float:right; width:110px;"><a href="#Logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
-    </ul>
+    <?php include "navbar.php"?>
     <div class="content">
         <div class="flex">
             <div class="flex-1 left">
