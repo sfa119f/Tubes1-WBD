@@ -1,6 +1,6 @@
-<?php
+<?php 
     $connect = mysqli_connect("localhost", "root", "", "choco_factory");
-    include "assets/php/checklogin.php"
+    include "assets/php/checklogin.php";
 ?>
 
 <!DOCTYPE html>
@@ -34,13 +34,32 @@
         </div>
         <table class="left">
             <?php
-				$query = "SELECT * FROM transaction ORDER BY transaction_date ASC";
-				$result = mysqli_query($connect, $query);
-				if(mysqli_num_rows($result) > 0)
-				{
-					while($row = mysqli_fetch_array($result))
-					{
-            ?>                
+                
+				$sql = "SELECT * FROM transaction ORDER BY transaction_date ASC";
+                $result = mysqli_query($connect, $sql);
+                
+                $result_per_page = 10;
+                $number_of_results = mysqli_num_rows($result);
+
+                $number_of_pages = ceil($number_of_results/$result_per_page);
+
+                //Determine which page is on
+                if(!isset($_GET['page'])){
+                    $page = 1;
+                }else{
+                    $page = $_GET['page'];
+                }
+                
+                //Determine starting limit
+                $this_page_first_result = ($page-1)*$result_per_page;
+
+                //Retrieve selcted results and limit them
+                $sql = "SELECT * FROM transaction  ORDER BY transaction_date ASC LIMIT" . $this_page_first_result. ",".$result_per_page;
+
+                $result = mysqli_query($connect, $sql);
+
+                while($row = mysqli_fetch_array($result)){
+            ?>
             <tr>
                 <th>Chocolate Name</th>
                 <th>Amount</th>
@@ -56,10 +75,16 @@
                 <td><?php echo gmdate("H:i:s", $row["transaction_time"]); ?></td>
                 <td><?php echo $row["transaction_address"]; ?></td>
             <?php
-					}
-				}
+            }
 			?>    
         </table>
+        <?php
+        
+            // display the links to the pages
+            for ($page=1;$page<=$number_of_pages;$page++) {
+                echo '<a href="history.php?page=' . $page . '">' . $page . '</a> ';
+            }
+        ?>
     </div>
 </body>
 </html>
