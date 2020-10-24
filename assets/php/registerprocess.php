@@ -33,10 +33,14 @@ if(isset($_POST['register'])){ #baca dari name
     }
     else{
         // ini sukses
-        $insertdata ="INSERT INTO users (username,email,password,user_type) VALUES('$username','$email','$password',1)";  
+        $insertdata ="INSERT INTO users (username,email,password,user_type) VALUES('$username','$email','$password',0)";  
+        /*  0 user
+            1 superuser
+         */
         $query = mysqli_query($con,$insertdata) or die (mysqli_error($con));
         if($query){
             $_SESSION['username'] = $username;
+            setcookie('logged',$username,time()+3600);
             echo'
             <script>
                 window.location.href="dashboard.php";

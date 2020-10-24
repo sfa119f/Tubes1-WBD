@@ -12,7 +12,7 @@ if(isset($_POST['login'])){ #baca dari name
             Welcome '.$username.'
         ';
         $_SESSION['username'] = $username;
-        //setcookie('rememberme',1,time()+3600);
+        setcookie('logged',$username,time()+3600);
         echo'
         <script>
             window.location.href="dashboard.php";

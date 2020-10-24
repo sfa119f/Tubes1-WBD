@@ -1,5 +1,13 @@
 <?php
     session_start();
+    //checking jika sudah login langsung dialihkan ke dashboard
+    if(!empty($_SESSION['username']) && !empty($_COOKIE['logged'])){
+        echo'
+            <script>
+                window.location.href="dashboard.php";
+            </script>
+        ';
+    }
 ?>
 
 <!DOCTYPE html>

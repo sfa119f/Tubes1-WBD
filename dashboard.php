@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    include "assets/php/checklogin.php"
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +28,7 @@
     <div class="content">
         <div class="flex">
             <div class="flex-1 left">
-                <h3>Hello, NAMA</h3>
+                <h3>Hello, <?php echo $_COOKIE['logged']?></h3>
             </div>
             <div class="flex-1 right mid">
                 <a href="">View all chocolates</a>
