@@ -61,4 +61,7 @@
     .navbar, .content {
         padding: 0 20px;
     }
+    .navbar li {
+        width: max-content;
+    }
 }
