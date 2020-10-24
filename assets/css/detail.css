@@ -34,7 +34,7 @@
     top: 75px;
     margin: 0.5rem;
 }
-.buy {
+.buy, .addStock {
     position: relative;
     left: calc(95% - 300px);
 }

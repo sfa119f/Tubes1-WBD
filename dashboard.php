@@ -16,14 +16,18 @@
 <body>
     <ul class="navbar">
         <li><a href="" class="active"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="#History"><i class="fas fa-history"></i> History</a></li>
+        <?php if($_SESSION['role'] === "1") : ?>
+            <li><a href="#AddChoco"><i class="fas fa-plus"></i> Add Choco</a></li>
+        <?php else : ?>
+            <li><a href="#History"><i class="fas fa-history"></i> History</a></li>
+        <?php endif; ?>
         <li class="search">
             <form action="">
                 <input type="text" placeholder="Search" name="search">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
         </li>
-        <li style="float:right; width:110px;"><a href="#Logout" style="text-align: right;"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        <li style="float:right; width:110px;"><a href="assets/php/logoutprocess.php" style="text-align: right;"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
     </ul>
     <div class="content">
         <div class="flex">

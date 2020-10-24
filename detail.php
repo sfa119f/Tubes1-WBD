@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    include "assets/php/checklogin.php"
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +16,11 @@
 <body>
     <ul class="navbar">
         <li><a href="#Home"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="#History"><i class="fas fa-history"></i> History</a></li>
+        <?php if($_SESSION['role'] === "1") : ?>
+            <li><a href="#AddChoco"><i class="fas fa-plus"></i> Add Choco</a></li>
+        <?php else : ?>
+            <li><a href="#History"><i class="fas fa-history"></i> History</a></li>
+        <?php endif; ?>
         <li class="search">
             <form action="">
                 <input type="text" placeholder="Search" name="search">
@@ -58,7 +62,12 @@
         </div>        
         <div>
             <button class="back"><i class="fas fa-chevron-left"></i> Back</button>
-            <button class="buy"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+            
+            <?php if($_SESSION['role'] === "1") : ?>
+                <button class="addStock"><i class="fas fa-plus-square"></i> Add Stock</button>
+            <?php else : ?>
+                <button class="buy"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+            <?php endif; ?>
         </div>
     </div>
 </body>

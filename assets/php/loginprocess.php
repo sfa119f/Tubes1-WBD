@@ -12,6 +12,8 @@ if(isset($_POST['login'])){ #baca dari name
             Welcome '.$username.'
         ';
         $_SESSION['username'] = $username;
+        $row = mysqli_fetch_assoc($query);
+        $_SESSION['role'] = $row["user_type"];
         setcookie('logged',$username,time()+3600);
         echo'
         <script>

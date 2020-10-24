@@ -1,11 +1,15 @@
 <?php
-    session_start();
+    include "assets/php/checklogin.php"
 ?>
 
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-    <title>Do Detail</title>
+    <?php if($_SESSION['role'] === "1") : ?>
+        <title>Add Stock</title>
+    <?php else : ?>
+        <title>Buy Choco</title>
+    <?php endif; ?>
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/board.css">
@@ -16,7 +20,11 @@
 <body>
     <ul class="navbar">
         <li><a href="#Home"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="#History"><i class="fas fa-history"></i> History</a></li>
+        <?php if($_SESSION['role'] === "1") : ?>
+            <li><a href="#AddChoco"><i class="fas fa-plus"></i> Add Choco</a></li>
+        <?php else : ?>
+            <li><a href="#History"><i class="fas fa-history"></i> History</a></li>
+        <?php endif; ?>
         <li class="search">
             <form action="">
                 <input type="text" placeholder="Search" name="search">
@@ -56,13 +64,19 @@
                     </tr>
                 </table>
                 <div>
-                    <label for="amount" id="amountLabel">Amount to Buy:</label>
+                    <?php if($_SESSION['role'] === "1") : ?>
+                        <label for="amount" id="amountLabel">Amount to Add:</label>
+                    <?php else : ?>
+                        <label for="amount" id="amountLabel">Amount to Buy:</label>
+                    <?php endif; ?>
                     <input class="center" type="number" id=amount name="amount" value="1">
                     <i class="fas fa-plus-circle" onclick="inAmount()"></i>
                     <i class="fas fa-minus-circle" onclick="decAmount(1)"></i>
                 </div>
-                <label id="priceLabel">Price: </label>
-                <label id="price">Rp 20000</label>
+                <?php if($_SESSION['role'] === "2") : ?>
+                    <label id="priceLabel">Price: </label>
+                    <label id="price">Rp 20000</label>
+                <?php endif; ?>
             </div>
         </div>
         <div class="address">
@@ -71,7 +85,11 @@
         </div>
         <div>
             <button class="cancel"><i class="fas fa-ban"></i> Cancel</button>
-            <button class="buy"><i class="fas fa-shopping-cart"></i> Buy</button>
+            <?php if($_SESSION['role'] === "1") : ?>
+                <button class="buy"><i class="fas fa-plus-square"></i> Add</button>
+            <?php else : ?>
+                <button class="buy"><i class="fas fa-shopping-cart"></i> Buy</button>
+            <?php endif; ?>
         </div>
     </div>
 </body>
