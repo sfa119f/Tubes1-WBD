@@ -33,9 +33,9 @@ if(isset($_POST['register'])){ #baca dari name
     }
     else{
         // ini sukses
-        $insertdata ="INSERT INTO users (username,email,password,user_type) VALUES('$username','$email','$password',0)";  
-        /*  0 user
-            1 superuser
+        $insertdata ="INSERT INTO users (username,email,password,user_type) VALUES('$username','$email','$password',2)";  
+        /*  1 superuser
+            2 user
          */
         $query = mysqli_query($con,$insertdata) or die (mysqli_error($con));
         if($query){
