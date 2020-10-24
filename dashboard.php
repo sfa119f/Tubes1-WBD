@@ -18,9 +18,9 @@
     <ul class="navbar">
         <li><a href="" class="active"><i class="fas fa-home"></i> Home</a></li>
         <?php if($_SESSION['role'] === "1") : ?>
-            <li><a href="#AddChoco"><i class="fas fa-plus"></i> Add Choco</a></li>
+            <li><a href="addChoco.php"><i class="fas fa-plus"></i> Add Choco</a></li>
         <?php else : ?>
-            <li><a href="#History"><i class="fas fa-history"></i> History</a></li>
+            <li><a href="history.php"><i class="fas fa-history"></i> History</a></li>
         <?php endif; ?>
         <li class="search">
             <form action="dashboard.php" method="GET">
