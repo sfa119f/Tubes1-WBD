@@ -40,6 +40,7 @@ if(isset($_POST['register'])){ #baca dari name
         $query = mysqli_query($con,$insertdata) or die (mysqli_error($con));
         if($query){
             $_SESSION['username'] = $username;
+            $_SESSION['role'] = 2;
             setcookie('logged',$username,time()+3600);
             echo'
             <script>
