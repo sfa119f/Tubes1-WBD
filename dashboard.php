@@ -16,7 +16,7 @@
 </head>
 <body>
     <ul class="navbar">
-        <li><a href="" class="active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="dashboard.php" class="active"><i class="fas fa-home"></i> Home</a></li>
         <?php if($_SESSION['role'] === "1") : ?>
             <li><a href="addChoco.php"><i class="fas fa-plus"></i> Add Choco</a></li>
         <?php else : ?>
@@ -48,6 +48,7 @@
         <div class="flex listChoco">
             <?php if(mysqli_num_rows($result)) :?>
 				<?php while($row = mysqli_fetch_array($result)) : ?>
+                    <a href="detail.php?chocoid=<?php echo $row["choco_id"]?>">
                     <div class="card">
                         <span class="tooltip center">Details</span>
                         <div class="image center mid">
@@ -58,7 +59,7 @@
                             <h5>Amount sold: <?php echo $row["amount_sold"]; ?></h5>
                             <h5>Price: Rp <?php echo $row["price"]; ?>,00</h5>
                         </div>
-                    </div>
+                    </div></a>
                 <?php endwhile; ?>
             <?php else : ?>
                 <h1 class="flex-1 mid center" style="height:300px; padding:125px">No Result</h1>

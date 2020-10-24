@@ -1,5 +1,5 @@
 <?php
-    $connect = mysqli_connect("localhost", "root", "", "choco_factory");
+    include "assets/php/dbconfig.php";
     include "assets/php/checklogin.php";    
 ?>
 
@@ -15,6 +15,34 @@
     <link rel="stylesheet" href="assets/css/solid.min.css">
 </head>
 <body>
+    <?php
+        $chocoid = $_GET["chocoid"];
+        $selectdata = "SELECT * FROM chocolate WHERE choco_id='$chocoid'";
+        $query = mysqli_query($con,$selectdata) or die (mysqli_error($con));
+        $data = mysqli_fetch_array($query);
+        $choconame = $data['choco_name'];
+        $chocoimg = substr($data['image'],3);
+        $chocoprice = $data['price'];
+        $chocodesc = $data['description'];
+        $chocoamount = $data['amount'];
+        $chocosold = $data['amount_sold'];
+
+        if(strlen($chocoprice) > 3){
+            $length = strlen($chocoprice)%3;
+            if($length == 0){$length = 3;}
+            $tempprice = $chocoprice;
+            $chocoprice1 = str_split($tempprice,$length)[0];
+            $tempprice = substr($tempprice,$length);
+            $tempprice = str_split($tempprice,3);
+            $chocopricestr = $chocoprice1;
+            for($i=0;$i < count($tempprice);$i++){
+                $chocopricestr = $chocopricestr.".".$tempprice[$i];
+            }
+        }
+        else{
+            $chocopricestr = $chocoprice;
+        }
+        ?>
     <ul class="navbar">
         <li><a href="#Home"><i class="fas fa-home"></i> Home</a></li>
         <?php if($_SESSION['role'] === "1") : ?>
@@ -33,30 +61,30 @@
     <div class="content">
         <div class="flex">
             <div class="flex-1 left">
-                <h2>Milk Choco</h2>
+                <h2><?php echo $choconame?></h2>
             </div>
         </div>
         <div class="flex detail">
             <div class="image mid">
-                <img src="assets/img/choco_milk.jpg" alt="Milk Choco">
+                <img src="<?php echo $chocoimg?>" alt="<?php echo $choconame?>">
             </div>
             <div class="info left">
                 <table>
                     <tr>
                         <th>Amount Sold</th>
-                        <td>21</td>
+                        <td><?php echo $chocosold?></td>
                     </tr>
                     <tr>
                         <th>Price</th>
-                        <td>Rp 3.000,00</td>
+                        <td>Rp <?php echo $chocopricestr?>,00</td>
                     </tr>
                     <tr>
                         <th>Amount</th>
-                        <td>9</td>
+                        <td><?php echo $chocoamount?></td>
                     </tr>
                     <tr>
                         <th>Description</th>
-                        <td>guy uyg uydsg ug uyds yu kysvd sdv usvyug sduyg  kjli asuchyd cu uysdckuab cubdchuabc usbcusdbckasdb</td>
+                        <td><?php echo $chocodesc?></td>
                     </tr>
                 </table>
             </div>
@@ -65,9 +93,9 @@
             <button class="back"><i class="fas fa-chevron-left"></i> Back</button>
             
             <?php if($_SESSION['role'] === "1") : ?>
-                <button class="addStock"><i class="fas fa-plus-square"></i> Add Stock</button>
+                <a href="doDetail.php?chocoid=<?php echo $chocoid?>"><button class="addStock"><i class="fas fa-plus-square"></i> Add Stock</button></a>
             <?php else : ?>
-                <button class="buy"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+                <a href="doDetail.php?chocoid=<?php echo $chocoid?>"><button class="buy"><i class="fas fa-shopping-cart"></i> Buy Now</button></a>
             <?php endif; ?>
         </div>
     </div>
