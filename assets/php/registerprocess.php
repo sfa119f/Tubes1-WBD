@@ -42,6 +42,7 @@ if(isset($_POST['register'])){ #baca dari name
             $_SESSION['username'] = $username;
             $_SESSION['role'] = 2;
             setcookie('logged',$username,time()+3600);
+            setcookie('logged_type',2,time()+3600);
             echo'
             <script>
                 window.location.href="dashboard.php";

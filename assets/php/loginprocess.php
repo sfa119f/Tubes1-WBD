@@ -15,6 +15,7 @@ if(isset($_POST['login'])){ #baca dari name
         $row = mysqli_fetch_assoc($query);
         $_SESSION['role'] = $row["user_type"];
         setcookie('logged',$username,time()+3600);
+        setcookie('logged_type',$row["user_type"],time()+3600);
         echo'
         <script>
             window.location.href="dashboard.php";
