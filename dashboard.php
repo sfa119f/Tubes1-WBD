@@ -51,7 +51,7 @@
             <div class="card">
                 <span class="tooltip center">Details</span>
                 <div class="image center mid">
-                    <img src="assets/img/choco_milk.jpg" alt="Milk Choco">
+                    <img src="images/<?php echo $row["image"]; ?>" >
                 </div>
                 <div class="info left">
                     <h4><?php echo $row["choco_name"]; ?></h4>
