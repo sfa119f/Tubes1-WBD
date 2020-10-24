@@ -53,7 +53,7 @@
                 <td><?php echo $row["transaction_amount"]; ?></td>
                 <td><?php echo $row["transaction_total"]; ?></td>
                 <td><?php echo $row["transaction_date"]; ?></td>
-                <td><?php echo $row["transaction_time"]; ?></td>
+                <td><?php echo gmdate("H:i:s", $row["transaction_time"]); ?></td>
                 <td><?php echo $row["transaction_address"]; ?></td>
             <?php
 					}
