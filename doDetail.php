@@ -1,5 +1,7 @@
 <?php
-    include "assets/php/checklogin.php"
+    include "assets/php/checklogin.php";
+    include "assets/php/detailprocess.php";
+    include "assets/php/doDetailprocess.php";
 ?>
 
 <!DOCTYPE html>
@@ -18,21 +20,7 @@
     <link rel="stylesheet" href="assets/css/solid.min.css">
 </head>
 <body>
-    <ul class="navbar">
-        <li><a href="#Home"><i class="fas fa-home"></i> Home</a></li>
-        <?php if($_SESSION['role'] === "1") : ?>
-            <li><a href="#AddChoco"><i class="fas fa-plus"></i> Add Choco</a></li>
-        <?php else : ?>
-            <li><a href="#History"><i class="fas fa-history"></i> History</a></li>
-        <?php endif; ?>
-        <li class="search">
-            <form action="">
-                <input type="text" placeholder="Search" name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </li>
-        <li style="float:right; width:110px;"><a href="#Logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
-    </ul>
+    <?php include "navbar.php"?>
     <div class="content">
         <div class="flex">
             <div class="flex-1 left">
@@ -41,59 +29,77 @@
         </div>
         <div class="flex detail">
             <div class="image mid">
-                <img src="assets/img/choco_milk.jpg" alt="Milk Choco">
+                <img src="<?php echo $chocoimg?>" alt="Milk Choco">
             </div>
             <div class="info left">
-                <h3>Milk Choco1</h3>
+                <h3><?php echo $choconame?></h3>
                 <table style="font-size:0.9rem">
                     <tr>
                         <th>Amount sold</th>
-                        <td>21</td>
+                        <td><?php echo $chocosold?></td>
                     </tr>
                     <tr>
                         <th>Price</th>
-                        <td>Rp 3.000,00</td>
+                        <td>Rp <?php echo $chocopricestr?>,00</td>
                     </tr>
                     <tr>
                         <th>Amount</th>
-                        <td>9</td>
+                        <td><?php echo $chocoamount?></td>
                     </tr>
                     <tr>
                         <th>Description</th>
-                        <td>guy uyg uydsg ug uyds yu kysvd sdv usvyug sduyg  kjli asuchyd cu uysdckuab cubdchuabc usbcusdbc sbcjb jdshbcsdj jhds jc kasdb</td>
+                        <td><?php echo $chocodesc?></td>
                     </tr>
                 </table>
-                <div>
+                <div method="POST">
                     <?php if($_SESSION['role'] === "1") : ?>
                         <label for="amount" id="amountLabel">Amount to Add:</label>
                     <?php else : ?>
                         <label for="amount" id="amountLabel">Amount to Buy:</label>
                     <?php endif; ?>
                     <input class="center" type="number" id=amount name="amount" value="1">
-                    <i class="fas fa-plus-circle" onclick="inAmount()"></i>
-                    <i class="fas fa-minus-circle" onclick="decAmount(1)"></i>
+                    <i class="fas fa-plus-circle" onclick="inAmount(); setPrice()"></i>
+                    <i class="fas fa-minus-circle" onclick="decAmount(1); setPrice()"></i>
                 </div>
                 <?php if($_SESSION['role'] === "2") : ?>
                     <label id="priceLabel">Price: </label>
-                    <label id="price">Rp 20000</label>
+                    <label id="price">Rp <?php echo $chocopricestr ?>,00</label>
                 <?php endif; ?>
             </div>
         </div>
-        <div class="address">
+        <div class="address" method="POST">
             <label for="address" id="addressLabel">Address:</label>
-            <textarea name="desc" id="address" rows="3" placeholder="Insert your address"></textarea>
+            <textarea name="address" id="address" rows="3" placeholder="Insert your address"></textarea>
         </div>
         <div>
-            <button class="cancel"><i class="fas fa-ban"></i> Cancel</button>
+            <a herf="dashboard.php?show=def"><button class="cancel"><i class="fas fa-ban"></i> Cancel</button></a>
             <?php if($_SESSION['role'] === "1") : ?>
-                <button class="buy"><i class="fas fa-plus-square"></i> Add</button>
+                <button class="add"><i class="fas fa-plus-square"></i> Add</button>
+                <input type="hidden" name="add" value="Add">
             <?php else : ?>
                 <button class="buy"><i class="fas fa-shopping-cart"></i> Buy</button>
+                <input type="hidden" name="buy" value="Buy">
             <?php endif; ?>
         </div>
     </div>
 </body>
 
 <script src="assets/scripts/numArrow.js"></script>
+<script>
+    const total = document.getElementById("amount");
+    const finalPrice = document.getElementById("price");
+
+    function setPrice(){
+        var final = (parseInt(total.value) * <?php Print($chocoprice) ?>).toString();
+        var temp = final.length%3;
+        var finalstr = final.substring(0, temp);
+        if (temp!=0) finalstr = finalstr + "."
+        for(var i=temp; i<final.length; i++){
+            finalstr = finalstr + final[i];
+            if ((i-temp+1)%3==0 && i+1!=final.length) finalstr = finalstr + ".";
+        }
+        finalPrice.innerHTML="Rp " + finalstr + ",00";
+    }
+</script>
 
 </html>
