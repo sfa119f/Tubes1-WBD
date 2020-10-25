@@ -167,6 +167,6 @@ Choco_factory.db: 13516080
 ## About
 Pembuatan aplikasi ini bertujuan untuk pemenuhan Tugas Besar 1 IF3110 WBD Teknik Informatika semester 5 tahun 2020.
 Author :
-1. Putra Hardi Ramadhan - 13516008
+1. Putra Hardi Ramadhan - 13516080
 2. Filbert Wijaya - 13518077
 3. Syarifuddin Fakhri Al Husaini - 13518095
