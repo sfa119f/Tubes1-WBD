@@ -17,6 +17,7 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/form.css">
+    <link rel="stylesheet" href="assets/css/alert.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/solid.min.css">
 </head>
@@ -42,11 +43,11 @@
                 <input type="submit" name="login" value="Log In">
                 <h4 class="center">Don't have an account? <a href="register.php">Register</a></h4>
             </form>
+            <?php include "assets/php/loginprocess.php"?>
         </div>
     </div>
 </body>
 
-<?php include "assets/php/loginprocess.php"?>
 <script src="assets/scripts/showPass.js"></script>
 
 </html>

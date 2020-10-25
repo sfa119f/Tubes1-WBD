@@ -19,34 +19,29 @@
                 if($query1 && $query2) {
                     echo'
                     <script>
-                    alert("Success buy chocolate");
                     window.location.href="history.php";
                     </script>
                     ';
                 }
                 else {
                     echo'
-                    <script>
-                    alert("Error when add stock");
-                    window.location.href="doDetail.php?chocoid='.$chocoid.'";                
-                    </script>
-                    ';
+                    <div class="error">
+                        Error when add stock
+                    </div>';
                 }
             }
             else {
                 echo'
-                <script>
-                    alert("Address is empty, please fill it");
-                    window.location.href="doDetail.php?chocoid='.$chocoid.'";
-                </script>
-                ';
+                <div class="error">
+                    Address is empty, please fill it
+                </div>';
             }
         }
         else {
             echo'
-            <script>
-                alert("Not enough stock to buy");
-            </script>
+            <div class="error">
+                Not enough stock to buy
+            </div>
             ';
         }
     }
@@ -57,20 +52,16 @@
         $query = mysqli_query($con,$addQuery) or die (mysqli_error($con));
         if($query) {
             echo'
-            <script>
-            alert("Success add stock");
-            window.location.href="dashboard.php?show=all";
-            </script>
-            ';
+            <div class="success">
+                Success add stock
+            </div>';
         }
         else{
             if($query) {
                 echo'
-                <script>
-                alert("Error when add stock");
-                window.location.href="doDetail.php?chocoid='.$chocoid.'";                
-                </script>
-                ';
+                <div class="error">
+                    Error when add stock
+                </div>';
             }
         }
     }

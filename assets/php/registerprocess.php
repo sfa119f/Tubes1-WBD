@@ -12,23 +12,23 @@ if(isset($_POST['register'])){ #baca dari name
     $countuser = mysqli_num_rows($query);
     if($countuser >= 1){
         echo'
-            <script>
-                alert("Username or Email already taken");
-            </script>
+            <div class="error">
+                Username or Email already taken
+            </div>
         ';
     }
     else if(!preg_match($regex, $password)){
         echo'
-            <script>
-                alert("Password can only contain alphanumeric characters and underscores");
-            </script>
+            <div class="error">
+                Password can only contain alphanumeric characters and underscores
+            </div>
         ';
     }
     else if($password != $confirmPassword){
         echo'
-            <script>
-                alert("Password and Confirm password must same");
-            </script>
+            <div class="error">
+                Password and Confirm password must same
+            </div>
         ';
     }
     else{
@@ -50,6 +50,12 @@ if(isset($_POST['register'])){ #baca dari name
                 setcookie('logged',$username,time()+3600);
                 setcookie('logged_type',2,time()+3600);
                 echo'
+                <div class="success">
+                    Registration success
+                </div>
+                ';
+                sleep(2);
+                echo'
                 <script>
                     window.location.href="dashboard.php";
                 </script>
@@ -58,10 +64,10 @@ if(isset($_POST['register'])){ #baca dari name
         }
         else{
             echo'
-            <script>
-                alert("error on server side, no need to worry");
-            </script>
-            ';
+            <div class="error">
+                error on server side, no need to worry
+            </div>
+        ';
         }
     }
 }

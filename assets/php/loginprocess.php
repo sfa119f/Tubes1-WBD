@@ -26,9 +26,9 @@ if(isset($_POST['login'])){ #baca dari name
     }
     else{
         echo'
-            <script>
-                alert("Username or Password invalid");
-            </script>
+            <div class="error">
+                Username or Password invalid
+            </div>
         ';
     }
 }

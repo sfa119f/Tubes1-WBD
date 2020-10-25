@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/form.css">
+    <link rel="stylesheet" href="assets/css/alert.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/solid.min.css">
     <style type="text/css"></style>
@@ -51,11 +52,11 @@
                 <input type="submit" id="registerbtn" name="register" value="Register">
                 <h4 class="center">Already have an account? <a href="login.php">Log In</a></h4>
             </form>
+            <?php include "assets/php/registerprocess.php"?>
         </div>
     </div>
 </body>
 
-<?php include "assets/php/registerprocess.php"?>
 <script src="assets/scripts/showPass.js"></script>
 <script src="assets/scripts/register.js"></script>
 

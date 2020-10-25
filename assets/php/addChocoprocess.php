@@ -16,24 +16,22 @@ if(isset($_POST['addChocolate'])){ #baca dari name
     $allowedfileext = array("jpg", "jpeg", "png");
     if (!file_exists($imagetmpname)) {
         echo'
-        <script>
-            alert("Image not exists");
-        </script>
+            <div class="error add">
+                Image not exists
+            </div>
         ';
     }
     else if (!in_array($imageext, $allowedfileext)) {
         echo'
-        <script>
-            alert("Allowed file formats .jpg, .jpeg and .png.");
-        </script>
-        ';           
+        <div class="error add">
+            Allowed file formats .jpg, .jpeg and .png.
+        </div>';
     }
     else if (file_exists($targetfile)) {
         echo'
-        <script>
-            alert("Image already exists, please rename or change the file!");
-        </script>
-        ';
+        <div class="error add">
+            Image already exists, please rename or change the file!
+        </div>';
     }
     else {
         if (move_uploaded_file($imagetmpname, $targetfile)) {
@@ -43,25 +41,23 @@ if(isset($_POST['addChocolate'])){ #baca dari name
             if($query){
                 echo'
                 <script>
-                alert("Success");
                 window.location.href="dashboard.php?show=all";
                 </script>
                 ';
+
             }
             else{
                 echo'
-                <script>
-                    alert("Insert failed");
-                </script>
-                ';
+                <div class="error add">
+                    Insert failed
+                </div>';
             }
         } 
         else {
             echo'
-            <script>
-                alert("Image cannot be uploaded");
-            </script>
-            ';
+            <div class="error add">
+                Image cannot be uploaded
+            </div>';
         }
     }
 }

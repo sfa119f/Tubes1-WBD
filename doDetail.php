@@ -1,7 +1,6 @@
 <?php
     include "assets/php/checklogin.php";
     include "assets/php/detailprocess.php";
-    include "assets/php/doDetailprocess.php";
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +14,7 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/board.css">
+    <link rel="stylesheet" href="assets/css/alert.css">
     <link rel="stylesheet" href="assets/css/detail.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/solid.min.css">
@@ -24,7 +24,11 @@
     <div class="content">
         <div class="flex">
             <div class="flex-1 left">
+            <?php if($_SESSION['role'] === "1") : ?>
+                <h2>Add Stock</h2>
+            <?php else : ?>
                 <h2>Buy Chocolate</h2>
+            <?php endif; ?>
             </div>
         </div>
         <div class="flex detail">
@@ -79,10 +83,11 @@
                             <input type="hidden" name="buy" value="Buy">
                         <?php endif; ?>
                     </div>
-                </form>        
+                </form>
                 <div>
                     <a href="detail.php?chocoid=<?php echo $chocoid?>"><button class="cancel"><i class="fas fa-ban"></i> Cancel</button></a>
                 </div>
+                <?php include "assets/php/doDetailprocess.php";?>  
             </div>
         </div>
     </div>

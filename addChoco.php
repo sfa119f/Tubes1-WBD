@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    include_once "assets/php/checklogin.php";
 ?>
 
 <!DOCTYPE html>
@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/board.css">
+    <link rel="stylesheet" href="assets/css/alert.css">
     <link rel="stylesheet" href="assets/css/addChoco.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/solid.min.css">
@@ -48,12 +49,12 @@
                     <textarea name="desc" id="desc" rows="5" required></textarea>
                 </div>
                 <input type="submit" name="addChocolate" value="Add Chocolate">
+                <?php include "assets/php/addChocoprocess.php"?>
             </form>
         </div>
     </div>
 </body>
 
-<?php include "assets/php/addChocoprocess.php"?>
 <script src="assets/scripts/numArrow.js"></script>
 
 </html>
