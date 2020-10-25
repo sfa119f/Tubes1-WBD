@@ -144,12 +144,12 @@ Pembagian tugas kelompok kami sebagai berikut:
 ### Frontend
 1. Login : 13516080, 13518095
 2. Register : 13516080, 13518095
-3. Dashboard: 1351807, 13518095
-4. Search : 13518095
+3. Dashboard: 13518077, 13518095
+4. Search : 13518077, 13518095
 5. Transaction History: 13518095 
 6. Detail : 13518095
 7. Do Detail : 13518095
-8. Add Chocolate : 13518095
+8. Add Chocolate : 13518077, 13518095
 
 ### Backend
 1. Login : 13518077
