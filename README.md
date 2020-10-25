@@ -223,11 +223,11 @@ Halaman Transaction History setelah pembelian
 Halaman Do Detail saat stok coklat tidak cukup untuk dibeli
 
 ### Halaman Add Chocolate
-![](Screenshot/23.jpg)
+![](Screenshot/023.jpg)
 Alert saat Image yang digunakan sama
-![](Screenshot/22.jpg)
+![](Screenshot/022.jpg)
 Menambahkan produk chacha
-![](Screenshot/24.jpg)
+![](Screenshot/024.jpg)
 Saat coklat berhasil ditambahkan
 
 ## Pembagian Tugas
