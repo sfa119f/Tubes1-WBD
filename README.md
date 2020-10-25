@@ -144,7 +144,7 @@ Pembagian tugas kelompok kami sebagai berikut:
 ### Frontend
 1. Login : 13516080, 13518095
 2. Register : 13516080, 13518095
-3. Dashboard: 13518095
+3. Dashboard: 1351807, 13518095
 4. Search : 13518095
 5. Transaction History: 13518095 
 6. Detail : 13518095
@@ -167,6 +167,6 @@ Choco_factory.db: 13516080
 ## About
 Pembuatan aplikasi ini bertujuan untuk pemenuhan Tugas Besar 1 IF3110 WBD Teknik Informatika semester 5 tahun 2020.
 Author :
-1. Putra Hardi Ramadhan - 13516077
+1. Putra Hardi Ramadhan - 13516008
 2. Filbert Wijaya - 13518077
 3. Syarifuddin Fakhri Al Husaini - 13518095
