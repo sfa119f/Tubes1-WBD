@@ -2,7 +2,7 @@
     include "assets/php/dbconfig.php";
 
     //Show list choco
-    $query = "SELECT * FROM chocolate ORDER BY choco_id ASC LIMIT 10";
+    $query = "SELECT * FROM chocolate ORDER BY amount_sold DESC LIMIT 10";
     $allSearch = false;
     $allChoco = false;
     if(isset($_GET["show"])) {
@@ -15,7 +15,7 @@
             $allChoco = true;
         }
         else {
-            $search = $_GET["show"];
+            $search = substr($_GET["show"], 1);
             $query = "SELECT * FROM chocolate WHERE choco_name LIKE '%".$search."%' ORDER BY choco_name ASC";
             $allChoco = false;
         }

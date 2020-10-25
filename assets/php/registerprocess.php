@@ -57,7 +57,7 @@ if(isset($_POST['register'])){ #baca dari name
                 sleep(2);
                 echo'
                 <script>
-                    window.location.href="dashboard.php";
+                    window.location.href="dashboard.php?show=def";
                 </script>
                 ';
             }

@@ -1,5 +1,5 @@
 <ul class="navbar">
-    <li><a href="dashboard.php" <?php if(preg_match("/\S*(dashboard.php)\S*/", $_SERVER['REQUEST_URI'])){echo 'class="active"';}?>><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="dashboard.php" <?php if(preg_match("/\S*(dashboard.php?show=def)\S*/", $_SERVER['REQUEST_URI'])){echo 'class="active"';}?>><i class="fas fa-home"></i> Home</a></li>
     <?php if($_SESSION['role'] === "1") : ?>
         <li><a href="addChoco.php" <?php if(preg_match("/\S*(addChoco.php)\S*/", $_SERVER['REQUEST_URI'])){echo 'class="active"';}?>><i class="fas fa-plus"></i> Add Choco</a></li>
     <?php else : ?>

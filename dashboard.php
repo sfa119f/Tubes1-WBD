@@ -23,7 +23,7 @@
             </div>
             <div class="flex-1 right mid">
                 <?php if($allSearch) : ?>
-                    <a href="dashboard.php?show=<?php echo $search?>" id="viewDefChoco">View all result</a>
+                    <a href="dashboard.php?show=S<?php echo $search?>" id="viewDefChoco">View all result</a>
                 <?php elseif($allChoco) : ?>
                     <a href="dashboard.php?show=def" id="viewDefChoco">View most sold</a>
                 <?php else : ?>
