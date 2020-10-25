@@ -33,16 +33,26 @@
 }
 .content button {
     position: relative;
-    top: 75px;
-    margin: 0.5rem;
 }
-.buy, .addStock {
+.buynow, .addStock {
     position: relative;
-    left: calc(95% - 300px);
+    left: calc(100% - 300px);
+    top: 200px;
+}
+.buy, .add {
+    position: relative;
+    left: calc(100% - 150px);
+    top: 89px;
 }
 .cancel {
     position: relative;
+    top: 50px;
     left: calc(95% - 300px);
+}
+.back {
+    position: relative;
+    top: 200px;
+    left: -220px;
 }
 label {
     font-size: 1rem;
@@ -53,15 +63,15 @@ i:hover {
     font-size: 1.2rem;
 }
 #amountLabel {
-    position: absolute;
-    left: 0.5rem;
-    bottom: -1.5rem;
+    position: relative;
+    left: 0;
+    bottom: -0.5rem;
 }
 input[type=number] {
-    position: absolute;
+    position: relative;
     width: 250px;
-    left: 0.5rem;
-    bottom: -3.5rem;
+    left: -135px;
+    bottom: -2.5rem;
     font-size: 1.2rem;
     font-weight: bold;
     font-family: inherit;
@@ -69,33 +79,36 @@ input[type=number] {
     border-radius: 0.25rem;
 }
 .fa-minus-circle {
-    position: absolute;
-    left: 1rem;
-    bottom: -3rem;
+    position: relative;
+    left: -410px;
+    bottom: -2.5rem;
 }
 .fa-plus-circle {
-    position: absolute;
-    left: calc(250px - 1.25rem);
-    bottom: -3rem;
+    position: relative;
+    left: -165px;
+    bottom: -2.5rem;
 }
 #priceLabel {
-    position: absolute;
+    position: relative;
     left: 300px;
-    bottom: -1.5rem;
+    bottom: 1.5rem;
 }
 #price {
-    position: absolute;
-    left: 300px;
-    bottom: -3rem;
+    position: relative;
+    left: 250px;
+    bottom: -0.5rem;
 }
 #addressLabel {
     position: relative;
-    top: 1.5rem;
+    top: 4rem;
+    left: -220px;
 }
 textarea {
     position: relative;
-    top: 1.5rem;
-    width: 100%;
+    top: 4rem;
+    left: -220px;
+    margin-right: -220px;
+    width: calc(100% + 220px);
     padding: 0.25rem;
     font-size: 0.9rem;
     font-family: inherit;
@@ -118,14 +131,30 @@ textarea {
         height: 150px;
     }
     .content button {
-        top: 0;
+        position: relative;
     }
-    #amountLabel, input[type=number], #priceLabel, #price, .fa-minus-circle, .fa-plus-circle {
+    .back {
+        left:0;
+    }
+    .back, .buynow, .addStock {
+        top: 2rem;
+    }
+    .cancel {
+        top: -60px;  
+    }
+    .buy, .add {
+        top: 54px;
+        margin-bottom: 75px;
+    }
+    #amountLabel, input[type=number], .fa-minus-circle, .fa-plus-circle {
         position: relative;
         top: 1rem;
     }
     #amountLabel, input[type=number], #priceLabel, #price {
         left: 0;
+    }
+    #priceLabel, #price {
+        top: 1.5rem;
     }
     .fa-minus-circle {
         left: calc(-250px - 1.25rem);
@@ -134,10 +163,11 @@ textarea {
         left: -2.15rem;
     }
     #addressLabel, textarea {
-        top: 0;
-        margin-top: 12px;
+        top: 1.5rem;
+        left: 0;
     }
-    .address {
-        margin-top: 20px;
+    textarea {
+        width: 100%;
+        margin-right: 0;
     }
 }

@@ -51,35 +51,39 @@
                         <td><?php echo $chocodesc?></td>
                     </tr>
                 </table>
-                <div method="POST">
-                    <?php if($_SESSION['role'] === "1") : ?>
-                        <label for="amount" id="amountLabel">Amount to Add:</label>
-                    <?php else : ?>
-                        <label for="amount" id="amountLabel">Amount to Buy:</label>
+                <form action="" method="POST">
+                    <div>
+                        <?php if($_SESSION['role'] === "1") : ?>
+                            <label for="amount" id="amountLabel">Amount to Add:</label>
+                        <?php else : ?>
+                            <label for="amount" id="amountLabel">Amount to Buy:</label>
+                        <?php endif; ?>
+                        <input class="center" type="number" id=amount name="amount" value="1">
+                        <i class="fas fa-plus-circle" onclick="inAmount(); setPrice()"></i>
+                        <i class="fas fa-minus-circle" onclick="decAmount(1); setPrice()"></i>
+                    </div>
+                    <?php if($_SESSION['role'] === "2") : ?>
+                        <label id="priceLabel">Price: </label>
+                        <label id="price">Rp <?php echo $chocopricestr ?>,00</label>
+                        <div class="address">
+                        <label for="address" id="addressLabel">Address:</label>
+                        <textarea name="address" id="address" rows="3" placeholder="Insert your address"></textarea>
+                        </div>
                     <?php endif; ?>
-                    <input class="center" type="number" id=amount name="amount" value="1">
-                    <i class="fas fa-plus-circle" onclick="inAmount(); setPrice()"></i>
-                    <i class="fas fa-minus-circle" onclick="decAmount(1); setPrice()"></i>
+                    <div>
+                        <?php if($_SESSION['role'] === "1") : ?>
+                            <button class="add"><i class="fas fa-plus-square"></i> Add</button>
+                            <input type="hidden" name="add" value="Add">
+                        <?php else : ?>
+                            <button class="buy"><i class="fas fa-shopping-cart"></i> Buy</button>
+                            <input type="hidden" name="buy" value="Buy">
+                        <?php endif; ?>
+                    </div>
+                </form>        
+                <div>
+                    <a href="detail.php?chocoid=<?php echo $chocoid?>"><button class="cancel"><i class="fas fa-ban"></i> Cancel</button></a>
                 </div>
-                <?php if($_SESSION['role'] === "2") : ?>
-                    <label id="priceLabel">Price: </label>
-                    <label id="price">Rp <?php echo $chocopricestr ?>,00</label>
-                <?php endif; ?>
             </div>
-        </div>
-        <div class="address" method="POST">
-            <label for="address" id="addressLabel">Address:</label>
-            <textarea name="address" id="address" rows="3" placeholder="Insert your address"></textarea>
-        </div>
-        <div>
-            <a herf="dashboard.php?show=def"><button class="cancel"><i class="fas fa-ban"></i> Cancel</button></a>
-            <?php if($_SESSION['role'] === "1") : ?>
-                <button class="add"><i class="fas fa-plus-square"></i> Add</button>
-                <input type="hidden" name="add" value="Add">
-            <?php else : ?>
-                <button class="buy"><i class="fas fa-shopping-cart"></i> Buy</button>
-                <input type="hidden" name="buy" value="Buy">
-            <?php endif; ?>
         </div>
     </div>
 </body>

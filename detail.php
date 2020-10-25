@@ -44,18 +44,17 @@
                         <th>Description</th>
                         <td><?php echo $chocodesc?></td>
                     </tr>
-                </table>
+                </table>     
+                <div>
+                    <a href="dashboard.php?show=def"><button class="back"><i class="fas fa-chevron-left"></i> Back</button></a>
+                    <?php if($_SESSION['role'] === "1") : ?>
+                        <a href="doDetail.php?chocoid=<?php echo $chocoid?>"><button class="addStock"><i class="fas fa-plus-square"></i> Add Stock</button></a>
+                    <?php else : ?>
+                        <a href="doDetail.php?chocoid=<?php echo $chocoid?>"><button class="buynow"><i class="fas fa-shopping-cart"></i> Buy Now</button></a>
+                    <?php endif; ?>
+                </div>
             </div>
-        </div>        
-        <div>
-            <a href="dashboard.php?show=def"><button class="back"><i class="fas fa-chevron-left"></i> Back</button></a>
-            
-            <?php if($_SESSION['role'] === "1") : ?>
-                <a href="doDetail.php?chocoid=<?php echo $chocoid?>"><button class="addStock"><i class="fas fa-plus-square"></i> Add Stock</button></a>
-            <?php else : ?>
-                <a href="doDetail.php?chocoid=<?php echo $chocoid?>"><button class="buy"><i class="fas fa-shopping-cart"></i> Buy Now</button></a>
-            <?php endif; ?>
-        </div>
+        </div>   
     </div>
 </body>
 </html>
