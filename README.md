@@ -235,24 +235,24 @@ Saat coklat berhasil ditambahkan
 Setiap anggota kelompok diwajibkan untuk mengerjakan bagian frontend dan backend.
 
 ### Frontend
-1. Login : 13516080, 13518095
+1. Login : 13516080, 13518095, 13518077
 2. Register : 13516080, 13518095
 3. Dashboard: 13518095
 4. Search : 13518095
 5. Transaction History: 13518095 
 6. Detail : 13518095
-7. Do Detail : 13518095
-8. Add Chocolate : 13518095
+7. Do Detail : 13518095, 13518077
+8. Add Chocolate : 13518095, 13518077
 
 ### Backend
 1. Login : 13518077
 2. Register : 13518077
 3. Dashboard: 13516080, 13518095
-4. Search : 
+4. Search : 13518095
 5. Transaction History: 13516080, 13518095 
-6. Detail : 
-7. Do Detail : 
-8. Add Chocolate : 
+6. Detail : 13518077
+7. Do Detail : 13518095, 13518077
+8. Add Chocolate : 13518077
 
 ### Database
 Choco_factory.db: 13516080
