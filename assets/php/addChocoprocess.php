@@ -31,7 +31,7 @@ if(isset($_POST['addChocolate'])){ #baca dari name
     else if (file_exists($targetfile)) {
         echo'
         <script>
-            alert("Image already exists");
+            alert("Image already exists, please rename or change the file!");
         </script>
         ';
     }
@@ -44,6 +44,7 @@ if(isset($_POST['addChocolate'])){ #baca dari name
                 echo'
                 <script>
                 alert("Success");
+                window.location.href="dashboard.php?show=all";
                 </script>
                 ';
             }

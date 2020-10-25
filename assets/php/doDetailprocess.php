@@ -59,7 +59,7 @@
             echo'
             <script>
             alert("Success add stock");
-            window.location.href="dashboard.php?show=def";
+            window.location.href="dashboard.php?show=all";
             </script>
             ';
         }
