@@ -114,25 +114,25 @@ Cara instalasi yang diberikan hanya untuk Chrome dan Firefox. Silahkan telusuri 
 #### Saat coklat berhasil ditambahkan
 ![](Screenshot/024.jpg)
 
-## Responsive Web
+### Responsive Web
 
-### Login dan register
+#### Login dan register
 ![](Screenshot/25.jpg)
 
 ![](Screenshot/26.jpg)
 
-### Dashboard
+#### Dashboard
 ![](Screenshot/27.jpg)
 
-### History dan Add Choco
+#### History dan Add Choco
 ![](Screenshot/28.jpg)
 
 ![](Screenshot/32.jpg)
 
-### Detail
+#### Detail
 ![](Screenshot/29.jpg)
 
-### Buy Choco dan Add Stock
+#### Buy Choco dan Add Stock
 ![](Screenshot/30.jpg)
 
 ![](Screenshot/33.jpg)
