@@ -178,19 +178,71 @@ Anggota kelompok dapat diisi pada spreadsheet berikut : https://docs.google.com/
 
 Deadline tugas adalah pada hari Minggu, 25 Oktober 2020 pukul 19.00 WIB. Waktu pengumpulan tugas yang dilihat adalah waktu push ke server Gitlab terakhir.
 
+## Daftar Requirement
+Minimum Requirement: XAMPP, MySQL
+
+##Cara instalasi dan menjalankan Server
+Jalankan XAMPP, kemudian jalankan apache dan mysql. Buka Web browser, lalu masukkan url localhost/tugas-besar-1-2020/ dan user akan diredirect menuju halaman login.php
+
+## Screenshot tampilan aplikasi
+### Halaman Login dan Register
+![](Screenshot/01.jpg)
+Login Biasa
+![](Screenshot/05.jpg)
+Register dengan username telah terpakai
+![](Screenshot/06.jpg)
+Register dengan email telah terpakai
+![](Screenshot/07.jpg)
+Alert saat mencoba register dengan username/email yang telah terpakai
+
+### Halaman Dashboard
+![](Screenshot/02.jpg)
+Dashboard setelah login dengan user putra
+![](Screenshot/03.jpg)
+Dashboard dengan tampilan 10 coklat dengan penjualan terbanyak
+![](Screenshot/04.jpg)
+Dashboard dengan tampilan seluruh coklat yang tersedia
+
+### Halaman Transaction History, Detail, Do Detail, dan Contoh Pembelian
+![](Screenshot/11.jpg)
+Halaman transaction history sebelum transaksi
+![](Screenshot/13.jpg)
+Halaman Detail Coklat Silverqueen
+![](Screenshot/15.jpg)
+Halaman Do Detail Coklat Silverqueen
+![](Screenshot/16.jpg)
+Halaman Transaction History setelah pembelian
+![](Screenshot/18.jpg)
+![](Screenshot/19.jpg)
+Halaman Do Detail saat stok coklat tidak cukup untuk dibeli
+
+
 ## Pembagian Tugas
 
 Setiap anggota kelompok diwajibkan untuk mengerjakan bagian frontend dan backend.
 
 ### Frontend
-1. Login : 13518xxx, 13518xxx
-2. Register : 13518xxx
-3. (Lanjutkan …)
+1. Login : 13516080, 13518095
+2. Register : 13516080, 13518095
+3. Dashboard: 13518095
+4. Search : 13518095
+5. Transaction History: 13518095 
+6. Detail : 13518095
+7. Do Detail : 13518095
+8. Add Chocolate : 13518095
 
 ### Backend
-1. Login : 13518xxx, 13518xxx
-2. Register : 13518xxx
-3. (Lanjutkan…)
+1. Login : 13518077
+2. Register : 13518077
+3. Dashboard: 13516080, 13518095
+4. Search : 
+5. Transaction History: 13516080, 13518095 
+6. Detail : 
+7. Do Detail : 
+8. Add Chocolate : 
+
+### Database
+Choco_factory.db: 13516080
 
 ## About
 
