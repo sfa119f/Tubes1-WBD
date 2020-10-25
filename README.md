@@ -1,44 +1,12 @@
 # Tugas 1 IF3110 Pengembangan Aplikasi Berbasis Web
 
-## Deskripsi Aplikasi Web
-
 <div align="center">
 <img src="https://i.imgur.com/0NI6Mkf.png" alt=""/>
 </div>
 
-Anda mungkin sudah tahu mengenai pabrik coklat terbesar seantero dunia, Willy Wangky.
-Akan tetapi, produsen terbaik tidak akan sukses tanpa konsumen dan distributor terbaik.
-Sebab coklat dari Willy Wangky sangat disenangi konsumen, maka Willy Wangky membutuhkan distributor yang handal dalam menangani penjualan coklat.
-Untungnya, Willy Wangky mengenal Jan.
-Jan sudah sangat pengalaman dengan distribusi makanan dan minuman ringan.
-Bahkan, Jan sudah memiliki usaha sendiri bernama Jan’s Cook.
+## Deskripsi Aplikasi Web
 
-Willy Wangky pun meminta Jan untuk memberikan saran bagaimana cara menjual coklat-coklat miliknya pada konsumen.
-Apalagi di tengah pandemi seperti ini, beberapa toko penjualan sepi dikunjungi pengunjung.
-Jan tanpa pikir panjang, memberikan saran mengenai penjualan daring menggunakan aplikasi berbasis web.
-Willy Wangky sangat senang dengan hal ini, dan segera mengutus Jan untuk mencari programmer terbaik untuk pengembangannya.
-
-Willy Wangky menginginkan web tersebut agar penggunanya dapat melakukan pendaftaran akun, login, logout, pencarian produk, mendapatkan penjelasan produk secara detail, pembelian produk dan dapat melihat riwayat pembelian produk, dan pekerjanya dapat dengan mudah menambahkan jenis coklat baru yang ingin dijual serta menambah ketersediaan coklat.
-
-Jan telah membuat desain user interface dengan low fidelity.
-Sekarang, dia merekrut kalian untuk membuat sebuah aplikasi web yang membantu penjualan coklat milik Willy Wangky.
-Disebabkan Jan sangat percaya dengan kalian, maka web yang kalian kembangkan dapat kalian hias dengan sebaik mungkin.
-Perlu diingat bahwa tata letak komponen harus mengikuti desain dari Jan.
-
-## Petunjuk Pengerjaan
-
-1. Buatlah grup pada Gitlab dengan format "IF3110-2020-01-KXX-YY", dengan XX adalah nomor kelas dan YY adalah nomor kelompok.
-2. Tambahkan anggota kelompok pada grup anda.
-3. Fork pada repository ini dengan grup yang telah dibuat.
-4. Ubah hak akses repository hasil Fork anda menjadi private.
-5. Silakan commit pada repository anda (hasil fork). Lakukan beberapa commit dengan pesan yang bermakna, contoh: `add login form`, `fix login bug`, jangan seperti `final`, `dikit lagi`, `benerin bug`.
-6. Buatlah file README yang berisi:
-    * Deskripsi aplikasi web
-    * Daftar requirement
-    * Cara instalasi
-    * Cara menjalankan server
-    * Screenshot tampilan aplikasi, dan
-    * Penjelasan mengenai pembagian tugas masing-masing anggota (lihat formatnya pada bagian pembagian tugas).
+Aplikasi web in merupakan aplikasi untuk keperluaan bisnis Willy Wangky yaitu penjualan coklat agar dapat dilakukan dengan cara daring. Saat memakai aplikasi ini pengguna dapat melakukan pendaftaran akun, login, logout, pencarian produk, mendapatkan penjelasan produk secara detail, pembelian produk dan dapat melihat riwayat pembelian produk. Willy Wangky sebagai seorang superuser dapat menambahkan jenis coklat baru yang ingin dijual serta menambah ketersediaan coklat menggunakan aplikasi ini juga. User interface yang digunakan mengikuti desain low fidelity dari Jan, kenalan dari Willy yang berpengalaman dengan distribusi makanan dan minuman ringan.
 
 ## Daftar Requirement
 
@@ -84,47 +52,65 @@ Cara instalasi yang diberikan hanya untuk Chrome dan Firefox. Silahkan telusuri 
 ## Screenshot Tampilan Aplikasi
 
 ### Halaman Login dan Register
+
 #### Login Biasa
 ![](Screenshot/01.jpg)
+
 #### Register dengan username telah terpakai
 ![](Screenshot/05.jpg)
+
 #### Register dengan email telah terpakai
 ![](Screenshot/06.jpg)
+
 #### Alert saat mencoba register dengan username/email yang telah terpakai
 ![](Screenshot/07.jpg)
 
 ### Halaman Dashboard
+
 #### Dashboard setelah login dengan user putra
 ![](Screenshot/02.jpg)
+
 #### Dashboard dengan tampilan 10 coklat dengan penjualan terbanyak
 ![](Screenshot/03.jpg)
+
 #### Dashboard dengan tampilan seluruh coklat yang tersedia
 ![](Screenshot/04.jpg)
 
 ### Halaman Search
+
 #### Search dengan query huruf "C"
 ![](Screenshot/20.jpg)
+
 #### Search saat tidak ditemukan hasil
 ![](Screenshot/21.jpg)
 
 ### Halaman Transaction History, Detail, Do Detail, dan Contoh Pembelian
+
 #### Halaman transaction history sebelum transaksi
 ![](Screenshot/11.jpg)
+
 #### Halaman Detail Coklat Silverqueen
 ![](Screenshot/13.jpg)
+
 #### Halaman Do Detail Coklat Silverqueen
 ![](Screenshot/15.jpg)
+
 #### Halaman Transaction History setelah pembelian
 ![](Screenshot/16.jpg)
+
 #### Halaman Do Detail saat stok coklat tidak cukup untuk dibeli
 ![](Screenshot/18.jpg)
+
 ![](Screenshot/19.jpg)
 
 ### Halaman Add Chocolate
+
 #### Alert saat Image yang digunakan sama
 ![](Screenshot/23.jpg)
+
 #### Menambahkan produk chacha
 ![](Screenshot/22.jpg)
+
 #### Saat coklat berhasil ditambahkan
 ![](Screenshot/24.jpg)
 
