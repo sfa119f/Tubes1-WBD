@@ -106,13 +106,36 @@ Cara instalasi yang diberikan hanya untuk Chrome dan Firefox. Silahkan telusuri 
 ### Halaman Add Chocolate
 
 #### Alert saat Image yang digunakan sama
-![](Screenshot/23.jpg)
+![](Screenshot/023.jpg)
 
 #### Menambahkan produk chacha
-![](Screenshot/22.jpg)
+![](Screenshot/022.jpg)
 
 #### Saat coklat berhasil ditambahkan
-![](Screenshot/24.jpg)
+![](Screenshot/024.jpg)
+
+## Responsive Web
+
+### Login dan register
+![](Screenshot/25.jpg)
+
+![](Screenshot/26.jpg)
+
+### Dashboard
+![](Screenshot/27.jpg)
+
+### History dan Add Choco
+![](Screenshot/28.jpg)
+
+![](Screenshot/32.jpg)
+
+### Detail
+![](Screenshot/29.jpg)
+
+### Buy Choco dan Add Stock
+![](Screenshot/30.jpg)
+
+![](Screenshot/33.jpg)
 
 ## Pembagian Tugas
 
