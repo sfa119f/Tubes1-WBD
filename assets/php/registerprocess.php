@@ -41,14 +41,20 @@ if(isset($_POST['register'])){ #baca dari name
         $query = mysqli_query($con,$insertdata) or die (mysqli_error($con));
         if($query){
             $_SESSION['username'] = $username;
-            $_SESSION['role'] = 2;
-            setcookie('logged',$username,time()+3600);
-            setcookie('logged_type',2,time()+3600);
-            echo'
-            <script>
-                window.location.href="dashboard.php";
-            </script>
-            ';
+            $temp = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+            $qtemp = mysqli_query($con,$temp) or die (mysqli_error($con));
+            if($qtemp) {
+                $rtemp = mysqli_fetch_assoc($qtemp);
+                $_SESSION['role'] = $rtemp["user_type"];;        
+                $_SESSION['user_id'] = (int)$rtemp["user_id"];
+                setcookie('logged',$username,time()+3600);
+                setcookie('logged_type',2,time()+3600);
+                echo'
+                <script>
+                    window.location.href="dashboard.php";
+                </script>
+                ';
+            }
         }
         else{
             echo'
