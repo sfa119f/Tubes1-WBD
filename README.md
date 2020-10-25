@@ -181,7 +181,7 @@ Deadline tugas adalah pada hari Minggu, 25 Oktober 2020 pukul 19.00 WIB. Waktu p
 ## Daftar Requirement
 Minimum Requirement: XAMPP, MySQL
 
-##Cara instalasi dan menjalankan Server
+## Cara instalasi dan menjalankan Server
 Jalankan XAMPP, kemudian jalankan apache dan mysql. Buka Web browser, lalu masukkan url localhost/tugas-besar-1-2020/ dan user akan diredirect menuju halaman login.php
 
 ## Screenshot tampilan aplikasi
@@ -203,6 +203,12 @@ Dashboard dengan tampilan 10 coklat dengan penjualan terbanyak
 ![](Screenshot/04.jpg)
 Dashboard dengan tampilan seluruh coklat yang tersedia
 
+### Halaman Search
+![](Screenshot/20.jpg)
+Search dengan query huruf "C"
+![](Screenshot/21.jpg)
+Search saat tidak ditemukan hasil
+
 ### Halaman Transaction History, Detail, Do Detail, dan Contoh Pembelian
 ![](Screenshot/11.jpg)
 Halaman transaction history sebelum transaksi
@@ -216,6 +222,13 @@ Halaman Transaction History setelah pembelian
 ![](Screenshot/19.jpg)
 Halaman Do Detail saat stok coklat tidak cukup untuk dibeli
 
+### Halaman Add Chocolate
+![](Screenshot/23.jpg)
+Alert saat Image yang digunakan sama
+![](Screenshot/22.jpg)
+Menambahkan produk chacha
+![](Screenshot/24.jpg)
+Saat coklat berhasil ditambahkan
 
 ## Pembagian Tugas
 
