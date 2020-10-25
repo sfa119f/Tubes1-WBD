@@ -1,18 +1,10 @@
 # Tugas 1 IF3110 Pengembangan Aplikasi Berbasis Web
 
-## Tujuan Pembelajaran Tugas Besar 1
-
-* Mahasiswa mampu membuat sebuah aplikasi web dengan menggunakan HTML, CSS dan JS.
-* Mahasiswa mampu  membuat sebuah layanan web dengan menggunakan PHP.
-* Mahasiswa mampu menggunakan AJAX 
-* Mahasiswa  memahami penangananan state dan perbedaan HTTP method.
-
-## Deskripsi Singkat
+## Deskripsi Aplikasi Web
 
 <div align="center">
 <img src="https://i.imgur.com/0NI6Mkf.png" alt=""/>
 </div>
-
 
 Anda mungkin sudah tahu mengenai pabrik coklat terbesar seantero dunia, Willy Wangky.
 Akan tetapi, produsen terbaik tidak akan sukses tanpa konsumen dan distributor terbaik.
@@ -33,132 +25,6 @@ Sekarang, dia merekrut kalian untuk membuat sebuah aplikasi web yang membantu pe
 Disebabkan Jan sangat percaya dengan kalian, maka web yang kalian kembangkan dapat kalian hias dengan sebaik mungkin.
 Perlu diingat bahwa tata letak komponen harus mengikuti desain dari Jan.
 
-## Tools
-
-* Untuk frontend, gunakan Javascript, HTML dan CSS. Tidak boleh menggunakan library atau framework CSS atau JS (e.g. JQuery, lodash, atau Bootstrap). CSS sebisa mungkin ada di file yang berbeda dengan HTML (tidak inline styling).
-* Untuk backend, wajib menggunakan PHP tanpa framework apapun. Harap diperhatikan, Anda harus mengimplementasikan fitur menggunakan HTTP method yang tepat.
-* Gunakan MySQL untuk menyimpan data.
-
-## Spesifikasi
-
-### Login Page
-
-![](mockup/Login.png)
-
-Halaman pertama yang ditampilkan jika pengguna belum login atau sudah logout adalah halaman Login.
-Pengguna dapat melakukan login sebagai user atau superuser. Login hanya membandingkan email dan password saja. 
-Tidak perlu tambahan proteksi apapun.
-
-Identitas pengguna yang sudah login akan disimpan sebagai cookie dalam browser. Cookie menyimpan data pengguna dalam bentuk string dengan panjang tertentu. Untuk mengetahui pengguna mana yang sedang login, string tersebut dapat dilihat di basis data. Identitas tersebut tidak boleh disimpan sebagai parameter HTTP GET. Jika cookie ini tidak ada, maka pengguna dianggap belum login dan aplikasi akan selalu mengarahkan (redirect) pengguna ke halaman ini, meskipun pengguna membuka halaman yang lain. Masa berlaku cookie dibebaskan.
-
-### Register Page
-
-![](mockup/Register.png)
-
-Pengguna dapat mendaftarkan akun baru jika belum login atau sudah logout.
-Pada halaman ini, pengguna mendaftarkan diri dengan email dan username yang unik.
-Pengguna tidak dapat mendaftar sebagai superuser, karena superuser ditambahkan secara manual pada basis data.
-Pengecekan keunikan nilai field dilakukan menggunakan AJAX. Jika unik, border field akan berwarna hijau.
-Jika tidak unik, akan muncul pesan error pada form.
-
-Validasi lain yang dilakukan pada sisi klien pada halaman ini adalah:
-* Email memiliki format email standar seperti “example@example.com”.
-* Username hanya menerima kombinasi alphabet, angka, dan underscore.
-
-Setelah semua nilai field sudah diisi dan valid, pengguna dapat mendaftarkan akun barunya.
-Jika akun berhasil didaftarkan, pengguna langsung diarahkan ke halaman Dashboard.
-Mekanisme cookie sama dengan halaman Login.
-
-### Dashboard page
-
-![](mockup/Dashboard.png)
-
-Pada halaman Dashboard, pengguna disambut dengan username pengguna dan daftar coklat yang tersedia.
-Coklat ditampilkan secara terurut sesuai dengan banyak coklat yang terjual, mulai dari yang paling banyak sampai yang paling sedikit.
-Banyak coklat yang ditampilkan dibatasi hanya sampai 10 coklat dengan penjualan terbanyak.
-Pengguna dapat melihat detail coklat dengan mengklik gambar atau nama coklat.
-Header aplikasi web untuk user terdiri dari search bar, pilihan untuk melihat daftar transaksi, dan pilihan untuk logout, sedangkan untuk superuser terdiri dari search bar, pilihan untuk menambah jenis coklat, dan pilihan untuk logout. Search bar digunakan untuk mencari coklat berdasarkan nama. Hasil pencarian ditampilkan pada halaman Search Result. Jika pengguna memilih untuk logout, pengguna akan diarahkan ke halaman Login.
-
-### Search Result page
-
-![](mockup/Search.png)
-
-
-Hasil pencarian dari search bar di halaman Dashboard akan ditampilkan pada halaman ini. Untuk setiap coklat, ditampilkan informasi nama, deskripsi, banyak coklat terjual, dan gambar coklat. Pengguna dapat melihat detail coklat dengan menekan bagian manapun pada section coklat tersebut.
-
-
-Jika daftar coklat melebihi jumlah tertentu (jumlah didefinisikan sendiri), maka akan muncul pagination untuk melihat daftar coklat selebihnya. Ketika memilih page, pengguna tidak diarahkan ke halaman baru namun daftar coklat langsung berubah di halaman ini.
-
-### Chocolate Detail page
-
-![](mockup/Detail%20User.png)
-
-Pada halaman Chocolate Detail, terdapat beberapa informasi mengenai coklat yang dipilih,
-yaitu nama, gambar, banyak coklat terjual, deskripsi, harga, dan ketersediaan dari coklat tersebut.
-Jika coklat dengan jenis tersebut masih tersedia, pengguna dapat memilih tombol “Buy Now” yang kemudian akan menampilkan banyak coklat yang dibeli,
-alamat pengiriman, total harga, tombol “Cancel” dan tombol “Buy” sebagai berikut:
-
-![](mockup/Buy.png)
-
-Pengguna memilih jumlah pembelian coklat dan alamat pengiriman.
-Perubahan total harga ditampilkan secara real-time sesuai dengan perubahan jumlah pembelian coklat.
-Pengguna tidak dapat melakukan pembelian coklat melebihi banyak coklat yang tersedia.
-(Asumsi saat proses pembelian coklat, ketersediaan coklat tidak berubah).
-Pastikan setelah proses pembelian, ketersediaan coklat berubah sebanyak jumlah yang dibeli.
-Jika pengguna login sebagai superuser, tombol “Buy Now” digantikan oleh tombol “Add Stock” yang jika ditekan akan menampilkan banyak coklat yang ingin ditambah, tombol “Cancel” dan tombol “Add” sebagai berikut :
-
-![](mockup/Detail%20Admin.png)
-
-![](mockup/Add%20Stock.png)
-
-### Transaction History Page
-
-![](mockup/History.png)
-
-Pada halaman ini, ditampilkan daftar coklat yang telah dibeli.
-Daftar diurutkan berdasarkan tanggal pembelian coklat. 
-Untuk setiap transaksi, ditampilkan informasi nama, jumlah pembelian, total harga, waktu pembelian dan alamat pengiriman.
-Pengguna dapat mengetahui detail coklat yang telah dibeli dengan menekan nama coklat yang akan mengarahkan pengguna ke halaman Chocolate Detail.
-
-### Add New Chocolate Page
-
-![](mockup/Add.png)
-
-Halaman ini hanya bisa diakses oleh superuser melalui pilihan untuk menambah jenis coklat pada header web.
-Pada halaman ini, superuser dapat menambah jenis coklat yang ada beserta detail dari coklat tersebut.
-Detail dari coklat meliputi nama, gambar, deskripsi, harga, dan ketersediaan dari coklat tersebut.
-Seluruh detail pada coklat harus diisi sebagai persyaratan coklat dapat ditambahkan.
-
-## Keterangan Tambahan
-
-* Jam pada aplikasi web mengacu pada jam lokal pengguna.
-* Basis data didefinisikan sendiri.
-
-## Bonus
-
-Catatan: Kerjakan dahulu spesifikasi wajib sebelum mengerjakan bonus.
-
-1. Data yang disimpan pada cookie memiliki expiry time. Jika access token ini tidak ada atau tidak valid, maka pengguna dianggap belum login. Expiry time sebuah access token berbeda dengan waktu berlaku cookie.
-2. Pada halaman Buy Chocolate, ketersediaan coklat diperbaharui secara real-time. Contoh jika pengguna A ingin membeli persediaan terakhir coklat dengan jenis tersebut dan ternyata pengguna B telah membeli coklat terakhir tersebut, maka ketersediaan coklat perlu diperbaharui. Akibatnya, pengguna A tidak dapat membeli coklat dengan jenis tersebut. Pembaharuan ketersediaan coklat menggunakan AJAX.
-3. Tampilan dibuat responsif (minimal untuk ukuran 1280x768 dan 800x600). Artinya, tampilan mungkin berubah menyesuaikan ukuran layar.
-
-## Bantuan
-
-Untuk membantu anda dalam mengerjakan tugas ini, ada beberapa keyword yang bisa anda cari untuk menyelesaikan tugas ini.
-
-|              | Kata Kunci                                                                                            |
-| ------------ | ----------------------------------------------------------------------------------------------------- |
-| HTTP methods | get, post, put, delete                                                                                |
-| CSS          | margin, padding, font-size, text-align, flex, grid, border, color, div, span, anchor tag, box-shadow  |
-| Javascript   | XMLHTTPRequest, addEventListener                                                                      |
-| PHP          | mysqli_connect, mysql_query, $_GET, $_POST, $_COOKIE, var_dump, print_r, echo, require, fungsi header |
-| SQL query    | SELECT, INSERT, UPDATE, DELETE, WHERE, operator LIKE                                                  |
-
-Jika ada pertanyaan, silahkan bertanya di channel Tubes 1 di MS Teams.
-
-## Anggota Kelompok
-Anggota kelompok dapat diisi pada spreadsheet berikut : https://docs.google.com/spreadsheets/d/1l2H6Er4lZjyiO2ehqlBKOOZT5gE1pLukw2EHTGzqY3U/edit?usp=sharing
-
 ## Petunjuk Pengerjaan
 
 1. Buatlah grup pada Gitlab dengan format "IF3110-2020-01-KXX-YY", dengan XX adalah nomor kelas dan YY adalah nomor kelompok.
@@ -174,75 +40,107 @@ Anggota kelompok dapat diisi pada spreadsheet berikut : https://docs.google.com/
     * Screenshot tampilan aplikasi, dan
     * Penjelasan mengenai pembagian tugas masing-masing anggota (lihat formatnya pada bagian pembagian tugas).
 
-## Pengumpulan Tugas
-
-Deadline tugas adalah pada hari Minggu, 25 Oktober 2020 pukul 19.00 WIB. Waktu pengumpulan tugas yang dilihat adalah waktu push ke server Gitlab terakhir.
-
 ## Daftar Requirement
-Minimum Requirement: XAMPP, MySQL
 
-## Cara instalasi dan menjalankan Server
-Jalankan XAMPP, kemudian jalankan apache dan mysql. Buka Web browser, lalu masukkan url localhost/tugas-besar-1-2020/ dan user akan diredirect menuju halaman login.php
+Minimum Requirement:
+1. Terinstall Apache
+2. Terinstall MySQL
+3. Terinstall web browser terbaru seperti Chrome dan Firefox
 
-## Screenshot tampilan aplikasi
+## Cara Instalasi 
+
+### Install Apache dan MySQL
+Untuk menginstall Apache dan MySQL dapat langsung menggunakan aplikasi XAMPP. Panduan instalasi sebagai berikut:
+* Windows : dapat menggikuti cara instalasi di https://www.geeksforgeeks.org/how-to-install-xampp-on-windows
+* Linux : 
+    1. Buka terminal
+    2. Jalankan `chmod 755 xampp-linux-*-installer.run`
+    3. Jalnkan `sudo ./xampp-linux-*-installer.run`
+    4. XAMPP berhasil terinstall
+* Mac OSX : dapat mengikuti cara instalasi di https://www.webucator.com/how-to/how-install-start-test-xampp-on-mac-osx.cfm
+
+### Install Web Browser
+Cara instalasi yang diberikan hanya untuk Chrome dan Firefox. Silahkan telusuri sendiri untuk web browser lainnya
+* Chrome : dapat mengikuti cara instalasi di https://support.google.com/chrome/answer/95346?co=GENIE.Platform%3DDesktop&hl=en
+* Firefox :
+    - Windows : dapat mengikuti cara instalasi di https://support.mozilla.org/en-US/kb/how-download-and-install-firefox-windows
+    - Linux : dapat mengikuti cara instalasi di https://support.mozilla.org/en-US/kb/install-firefox-linux
+    - Mac OSX : dapat mengikuti cara instalasi di https://support.mozilla.org/en-US/kb/how-download-and-install-firefox-mac
+
+
+## Cara Menjalankan Server
+
+1. Copy seluruh 1 folder web aplication ini ke `../xampp/htdocs` (biasanya folder xampp ada di direktori `C:/` )
+2. Buka XAMPP
+3. Ubah Port MySQL ke 3306
+4. Start Apache dan MySQL
+5. Buka url `localhost/phpmyadmin` di browser
+6. Buat database baru dengan nama `choco_factory`
+7. Import database yang berada di folder database ke database yang telah dibuat
+8. Masukkan url `localhost/tugas-besar-1-2020` di browser dan akan diredirect ke halaman login
+9. Aplikasi siap digunakan
+
+
+## Screenshot Tampilan Aplikasi
+
 ### Halaman Login dan Register
+#### Login Biasa
 ![](Screenshot/01.jpg)
-Login Biasa
+#### Register dengan username telah terpakai
 ![](Screenshot/05.jpg)
-Register dengan username telah terpakai
+#### Register dengan email telah terpakai
 ![](Screenshot/06.jpg)
-Register dengan email telah terpakai
+#### Alert saat mencoba register dengan username/email yang telah terpakai
 ![](Screenshot/07.jpg)
-Alert saat mencoba register dengan username/email yang telah terpakai
 
 ### Halaman Dashboard
+#### Dashboard setelah login dengan user putra
 ![](Screenshot/02.jpg)
-Dashboard setelah login dengan user putra
+#### Dashboard dengan tampilan 10 coklat dengan penjualan terbanyak
 ![](Screenshot/03.jpg)
-Dashboard dengan tampilan 10 coklat dengan penjualan terbanyak
+#### Dashboard dengan tampilan seluruh coklat yang tersedia
 ![](Screenshot/04.jpg)
-Dashboard dengan tampilan seluruh coklat yang tersedia
 
 ### Halaman Search
+#### Search dengan query huruf "C"
 ![](Screenshot/20.jpg)
-Search dengan query huruf "C"
+#### Search saat tidak ditemukan hasil
 ![](Screenshot/21.jpg)
-Search saat tidak ditemukan hasil
 
 ### Halaman Transaction History, Detail, Do Detail, dan Contoh Pembelian
+#### Halaman transaction history sebelum transaksi
 ![](Screenshot/11.jpg)
-Halaman transaction history sebelum transaksi
+#### Halaman Detail Coklat Silverqueen
 ![](Screenshot/13.jpg)
-Halaman Detail Coklat Silverqueen
+#### Halaman Do Detail Coklat Silverqueen
 ![](Screenshot/15.jpg)
-Halaman Do Detail Coklat Silverqueen
+#### Halaman Transaction History setelah pembelian
 ![](Screenshot/16.jpg)
-Halaman Transaction History setelah pembelian
+#### Halaman Do Detail saat stok coklat tidak cukup untuk dibeli
 ![](Screenshot/18.jpg)
 ![](Screenshot/19.jpg)
-Halaman Do Detail saat stok coklat tidak cukup untuk dibeli
 
 ### Halaman Add Chocolate
-![](Screenshot/023.jpg)
-Alert saat Image yang digunakan sama
-![](Screenshot/022.jpg)
-Menambahkan produk chacha
-![](Screenshot/024.jpg)
-Saat coklat berhasil ditambahkan
+#### Alert saat Image yang digunakan sama
+![](Screenshot/23.jpg)
+#### Menambahkan produk chacha
+![](Screenshot/22.jpg)
+#### Saat coklat berhasil ditambahkan
+![](Screenshot/24.jpg)
 
 ## Pembagian Tugas
 
-Setiap anggota kelompok diwajibkan untuk mengerjakan bagian frontend dan backend.
+Pembagian tugas kelompok kami sebagai berikut:
 
 ### Frontend
-1. Login : 13516080, 13518095, 13518077
+1. Login : 13516080, 13518095
 2. Register : 13516080, 13518095
 3. Dashboard: 13518095
 4. Search : 13518095
 5. Transaction History: 13518095 
 6. Detail : 13518095
-7. Do Detail : 13518095, 13518077
-8. Add Chocolate : 13518095, 13518077
+7. Do Detail : 13518095
+8. Add Chocolate : 13518095
 
 ### Backend
 1. Login : 13518077
@@ -251,14 +149,15 @@ Setiap anggota kelompok diwajibkan untuk mengerjakan bagian frontend dan backend
 4. Search : 13518095
 5. Transaction History: 13516080, 13518095 
 6. Detail : 13518077
-7. Do Detail : 13518095, 13518077
+7. Do Detail : 13518095
 8. Add Chocolate : 13518077
 
 ### Database
 Choco_factory.db: 13516080
 
 ## About
-
-Asisten IF3110 - 2020
-
-Abel | Agwar | Asif | Iwang | Meyer | Vendra
+Pembuatan aplikasi ini bertujuan untuk pemenuhan Tugas Besar 1 IF3110 WBD Teknik Informatika semester 5 tahun 2020.
+Author :
+1. Putra Hardi Ramadhan - 13516077
+2. Filbert Wijaya - 13518077
+3. Syarifuddin Fakhri Al Husaini - 13518095
