@@ -26,7 +26,7 @@
             <form action="#" method="POST" enctype="multipart/form-data">
                 <div>
                     <label for="name">Name</label>
-                    <input class="left" type="text" id="name" name="name" required>
+                    <input class="left" type="text" id="name" name="name">
                 </div>
                 <div>
                     <label for="price">Price (Rp)</label>
@@ -42,11 +42,11 @@
                 </div>
                 <div>
                     <label for="image">Image</label>
-                    <input type="file" id="image" name="image" required>
+                    <input type="file" id="image" name="image">
                 </div>
                 <div>
                     <label for="desc">Description</label>
-                    <textarea name="desc" id="desc" rows="5" required></textarea>
+                    <textarea name="desc" id="desc" rows="5"></textarea>
                 </div>
                 <input type="submit" name="addChocolate" value="Add Chocolate">
                 <?php include "assets/php/addChocoprocess.php"?>

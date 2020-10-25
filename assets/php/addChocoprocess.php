@@ -14,10 +14,24 @@ if(isset($_POST['addChocolate'])){ #baca dari name
     $imageext = strtolower(pathinfo($targetfile, PATHINFO_EXTENSION));
     // Allowed file types
     $allowedfileext = array("jpg", "jpeg", "png");
-    if (!file_exists($imagetmpname)) {
+    if ($name == "") {
+        echo'
+            <div class="error add">
+                Name is empty, please feel it!
+            </div>
+        ';
+    }
+    else if (!file_exists($imagetmpname)) {
         echo'
             <div class="error add">
                 Image not exists
+            </div>
+        ';
+    }
+    else if ($desc == "") {
+        echo'
+            <div class="error add">
+                Description is empty, please feel it!
             </div>
         ';
     }
